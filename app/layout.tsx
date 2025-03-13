@@ -8,10 +8,25 @@ import Footer from "@/components/footer"
 
 const inter = Inter({ subsets: ["latin"] })
 
-export const metadata: Metadata = {
-  title: "AI Solutions for SMEs | Founder Team",
-  description: "Empowering small and medium enterprises with accessible AI solutions",
-    generator: 'v0.dev'
+export const metadata = {
+  title: "AI Solutions for SMEs",
+  description: "Empowering small and medium enterprises with accessible AI Agent solutions",
+  openGraph: {
+    title: "AI Solutions for SMEs",
+    description: "Empowering small and medium enterprises with accessible AI Agent solutions",
+    url: "https://mob-ai-website.vercel.app/",
+    siteName: "MOB.AI",
+    images: [
+      {
+        url: "https://mob-ai-website.vercel.app/bg-image.jpeg", // Change to your actual image URL
+        width: 1200,
+        height: 630,
+        alt: "AI Solutions for SMEs",
+      },
+    ],
+    locale: "en_US",
+    type: "website",
+  },
 }
 
 export default function RootLayout({
