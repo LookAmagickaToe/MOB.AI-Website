@@ -37,7 +37,7 @@ export default function ContactSection() {
                   <Mail className="h-6 w-6 text-blue-500 mt-1" />
                   <div>
                     <h4 className="font-medium text-lg text-blue-300">Email</h4>
-                    <p className="text-blue-100">maxime.christian@manageandmore.de</p>
+                    <p className="overflow-auto whitespace-nowrap text-blue-100">maxime.christian@manageandmore.de</p>
                   </div>
                 </CardContent>
               </Card>
