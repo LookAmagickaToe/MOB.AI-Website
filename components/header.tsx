@@ -36,22 +36,22 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-4">
+          
+            <Button className="bg-blue-600 hover:bg-blue-700 text-soft-white rounded-md" size="sm"
+              onClick={scrollToContact}
+              >
+                {language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}  
+              </Button>
             
             <Button
               variant="outline"
               size="sm"
               onClick={toggleLanguage}
-              className="border-blue-500 text-blue-400 hover:bg-blue-900/20"
+              className="border-blue-500 text-soft-white"
             >
               {language === "en" ? "DE" : "EN"}
             </Button>
 
-            {/* Mobile Menu Button */}
-            {isMobile && (
-              <Button variant="ghost" size="icon" onClick={toggleMenu} className="md:hidden text-blue-400">
-                {isMenuOpen ? <X className="h-6 w-6" /> : <Menu className="h-6 w-6" />}
-              </Button>
-            )}
           </div>
         </div>
 
