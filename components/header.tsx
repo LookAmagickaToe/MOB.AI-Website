@@ -36,11 +36,6 @@ export default function Header() {
           </div>
 
           <div className="flex items-center gap-4">
-          
-            <Button size="sm" onClick={scrollToContact} className="bg-blue-600 hover:bg-blue-700 text-white "
-            >
-                {language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}
-            </Button>
             
             <Button
               variant="outline"
