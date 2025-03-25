@@ -5,6 +5,7 @@ import ValuePropositionSection from "@/components/value-proposition-section"
 import TeamSection from "@/components/team-section"
 import UseCasesSection from "@/components/use-cases-section"
 import ContactSection from "@/components/contact-section"
+import OurApproach from "@/components/Our-Approach2"
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
       <BannerSection />
       <ProblemStatementSection />
       <ValuePropositionSection />
+      <OurApproach />
+      <TeamSection /> 
       <UseCasesSection />
       <ContactSection />
     </div>

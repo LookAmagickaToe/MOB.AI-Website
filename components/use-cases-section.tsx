@@ -6,37 +6,48 @@ import { ChevronLeft, ChevronRight } from "lucide-react"
 import { Button } from "@/components/ui/button"
 import { Card, CardContent } from "@/components/ui/card"
 import { useMobile } from "@/hooks/use-mobile"
+import { useLanguage } from "@/components/LanguageContext"
 
 export default function UseCasesSection() {
+  const { language } = useLanguage()
   const scrollContainerRef = useRef<HTMLDivElement>(null)
   const isMobile = useMobile()
 
   const useCases = [
     {
-      title: "Predictive Inventory Management",
-      description: "AI-powered inventory forecasting that reduced stockouts by 35% for a retail chain.",
-      image: "/placeholder.svg?height=200&width=300",
+      title: "📞 Customer Service & Support",
+      titleGerman: "📞 Kundenservice & Support",
+      description: "Automate customer service and support with chatbots and AI-driven solutions.",
+      descriptionGerman: "Automatisieren Sie den Kundenservice und -support mit Chatbots und KI-gestützten Lösungen.",
+      image: "/chatbot.png?height=200&width=300",
     },
     {
-      title: "Customer Support Automation",
-      description: "Chatbot implementation that handled 60% of customer queries for a SaaS company.",
-      image: "/placeholder.svg?height=200&width=300",
+      title: "📄 Knowledge Management",
+      titleGerman:"📄 Wissens-Management",
+      descriptionGerman: "Organisieren, zentralisieren und entsperren Sie das Wissen Ihres Unternehmens - KI-Agenten helfen, Informationen effizient zu erfassen, zu strukturieren und abzurufen.",
+      description: "Organize, centralize, and unlock your company’s knowledge — AI agents help capture, structure, and retrieve information efficiently.",
+      image: "/knowledge_management.png?height=200&width=300",
     },
     {
-      title: "Sales Forecasting",
-      description: "Machine learning model that improved sales prediction accuracy by 40% for a distribution business.",
-      image: "/placeholder.svg?height=200&width=300",
+      title: "📋 Database Maintenance",
+      titleGerman:"📋 Datenbankpflege",
+      descriptionGerman: "Automatisieren Sie Dateneingabe-, Bereinigungs- und Wartungsaufgaben, um Datenqualität und -konsistenz sicherzustellen.", 
+      description: "Automate data entry, cleaning, and maintenance tasks to ensure data quality and consistency.",
+      image: "/database.png?height=fill&width=auto",
     },
     {
-      title: "Document Processing",
-      description: "Automated document extraction system that reduced processing time by 75% for a legal firm.",
-      image: "/placeholder.svg?height=200&width=300",
+      title: "📅 Appointment Scheduling",
+      titleGerman:"📅 Termin-management",
+      descriptionGerman: "Automatisierte Terminplanung und -erinnerungen, um Ausfälle zu reduzieren und die Kundenzufriedenheit zu verbessern.",
+      description: "Automate appointment scheduling and reminders to reduce no-shows and improve customer satisfaction.",
+      image: "/scheduling.png?height=200&width=300",
     },
     {
-      title: "Personalized Marketing",
-      description:
-        "AI-driven customer segmentation that increased campaign conversion rates by 28% for an e-commerce business.",
-      image: "/placeholder.svg?height=200&width=300",
+      title: "💬 Marketing & Content Creation",
+      titleGerman:"💬 Marketing & Content-Erstellung",
+      descriptionGerman: "Autoatisierte erstellung von personalisierten Marketing-Inhalten, Verwaltung von Social Media und Automatisierung von Content-Erstellung.",
+      description:  "Generate personalized marketing content, manage social media, and automate content creation.",
+      image: "/contentcreation.png?height=200&width=300",
     },
   ]
 
@@ -52,7 +63,7 @@ export default function UseCasesSection() {
     <section className="w-full py-20">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="flex justify-between items-center mb-12">
-          <h2 className="text-3xl md:text-4xl font-bold text-blue-400">Example Use Cases</h2>
+          <h2 className="text-3xl md:text-4xl font-bold text-blue-400">{language === "en" ? "Example Use Cases" : "Beispiel Anwendungen"}</h2>
           {!isMobile && (
             <div className="flex space-x-2">
               <Button
@@ -87,17 +98,17 @@ export default function UseCasesSection() {
               key={index}
               className="flex-shrink-0 w-[300px] md:w-[350px] bg-card border border-blue-900/30 card-relief"
             >
-              <div className="relative h-[200px] w-full">
+              <div className="relative h-[100px] w-full mt-5">
                 <Image
                   src={useCase.image || "/placeholder.svg"}
                   alt={useCase.title}
                   fill
-                  className="object-cover rounded-t-lg"
+                  className="object-contain rounded-t-lg"
                 />
               </div>
               <CardContent className="p-6">
-                <h3 className="text-xl font-bold mb-2 text-blue-400">{useCase.title}</h3>
-                <p className="text-blue-100">{useCase.description}</p>
+                <h3 className="text-xl font-bold mb-2 text-blue-400">{language === "en" ? useCase.title : useCase.titleGerman}</h3>
+                <p className="text-blue-100">{language === "en" ? useCase.description : useCase.descriptionGerman}</p>
               </CardContent>
             </Card>
           ))}

@@ -1,21 +1,35 @@
+"use client"
 import { Button } from "@/components/ui/button"
 import Image from "next/image"
+import { useLanguage } from "@/components/LanguageContext"
 
 export default function HeroSection() {
+  const { language } = useLanguage()
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact")
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
   return (
     <section className="w-full py-20 md:py-28 lg:py-32">
       <div className="container px-4 md:px-6 mx-auto">
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
           <div className="flex flex-col space-y-6">
             <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-blue-600">
-              Empowering SMEs with AI Solutions
+              {language === "en" ? "Empowering SMEs with AI Solutions" : "Entfalten Sie das Potential von KI in Ihrem Unternehmen"}
+            
             </h1>
             <p className="text-xl text-blue-100 max-w-[600px]">
-              We bridge the gap between cutting-edge AI technology and practical business applications.
+            {language === "en" ? 
+            "We implement the latest AI technology directly from university into your business processes, dramatically increasing your efficiency." : 
+            "Wir implementieren neueste KI-Technologie direkt von der Uni in Ihren Geschäftsabläufen und steigern so drastisch Ihre Effizienz."}
             </p>
             <div className="pt-4">
-              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-md">
-                Get in Touch
+              <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-md"
+              onClick={scrollToContact}
+              >
+                {language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}  
               </Button>
             </div>
           </div>
@@ -24,7 +38,7 @@ export default function HeroSection() {
               src="/groupimage.jpg?height=500&width=600"
               alt="Founder Team"
               fill
-              className="object-cover rounded-lg"
+              className="object-cover rounded-lg image-render-pixel"
               priority
             />
           </div>

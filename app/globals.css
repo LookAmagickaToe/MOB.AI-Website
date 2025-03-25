@@ -88,6 +88,14 @@
   transform: translateY(-2px);
   box-shadow: 0 10px 25px rgba(0, 0, 0, 0.6), 0 0 0 1px rgba(59, 130, 246, 0.2);
 }
+.font-inter {
+  font-family: var(--font-inter), sans-serif;
+}
+
+.font-audiowide {
+  font-family: var(--font-audiowide), sans-serif;
+}
+
 
 /* Global fixed background */
 .fixed-bg {
@@ -121,5 +129,10 @@
 /* This might not work due to iframe restrictions */
 .calendly-inline-widget iframe body .calendly-embed-content {
   display: none; /* Tries to hide the top */
+}
+.image-render-pixel {
+  image-rendering: auto;
+  image-rendering: crisp-edges;
+  image-rendering: -webkit-optimize-contrast; /* for Safari */
 }
 

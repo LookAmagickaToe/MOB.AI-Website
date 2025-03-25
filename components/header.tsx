@@ -6,55 +6,42 @@ import Image from "next/image"
 import { Button } from "@/components/ui/button"
 import { Menu, X } from "lucide-react"
 import { useMobile } from "@/hooks/use-mobile"
+import { Space_Grotesk } from "next/font/google"
+import { useLanguage } from "@/components/LanguageContext"
+
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false)
-  const [language, setLanguage] = useState<"en" | "de">("en")
   const isMobile = useMobile()
+  const { language, toggleLanguage } = useLanguage()
 
+
+
+  const scrollToContact = () => {
+    const contactSection = document.getElementById("contact")
+    if (contactSection) {
+      contactSection.scrollIntoView({ behavior: "smooth" })
+    }
+  }
   const toggleMenu = () => {
     setIsMenuOpen(!isMenuOpen)
   }
-
-  const toggleLanguage = () => {
-    setLanguage(language === "en" ? "de" : "en")
-  }
-
-  const navItems = [
-    { name: language === "en" ? "Home" : "Startseite", href: "#" },
-    { name: language === "en" ? "Services" : "Dienstleistungen", href: "#" },
-    { name: language === "en" ? "Team" : "Team", href: "#" },
-    { name: language === "en" ? "Use Cases" : "Anwendungsfälle", href: "#" },
-    { name: language === "en" ? "Contact" : "Kontakt", href: "#contact" },
-  ]
 
   return (
     <header className="sticky top-0 z-50 w-full border-b border-blue-900/20 backdrop-blur-md bg-background/80">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 items-center justify-between">
           <div className="flex items-center gap-2">
-            <div className="relative h-8 w-8">
-              <Image src="/placeholder.svg?height=32&width=32" alt="Logo" fill className="object-contain" />
-            </div>
-            <span className="text-xl font-semibold text-blue-400">AI Founders</span>
+            <span className="text-4xl font-audiowide text-blue-600">MOB.AI</span>
           </div>
 
-          {/* Desktop Navigation */}
-          {!isMobile && (
-            <nav className="hidden md:flex items-center gap-6">
-              {navItems.map((item, index) => (
-                <Link
-                  key={index}
-                  href={item.href}
-                  className="text-sm font-medium text-blue-100 hover:text-blue-400 transition-colors"
-                >
-                  {item.name}
-                </Link>
-              ))}
-            </nav>
-          )}
-
           <div className="flex items-center gap-4">
+          
+            <Button size="sm" onClick={scrollToContact} className="bg-blue-600 hover:bg-blue-700 text-white "
+            >
+                {language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}
+            </Button>
+            
             <Button
               variant="outline"
               size="sm"
