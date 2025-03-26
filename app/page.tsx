@@ -15,7 +15,6 @@ export default function Home() {
 
       {/* Sections */}
       <HeroSection />
-      <BannerSection />
       <ProblemStatementSection />
       <ValuePropositionSection />
       <OurApproach />
