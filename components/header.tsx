@@ -31,8 +31,9 @@ export default function Header() {
     <header className="sticky top-0 z-50 w-full border-b border-blue-900/20 backdrop-blur-md bg-background/80">
       <div className="container mx-auto px-4 md:px-6">
         <div className="flex h-16 items-center justify-between">
-          <div className="flex items-center gap-2">
-            <span className="text-4xl font-audiowide text-blue-600">MOB.AI</span>
+          <div className="flex-col items-center leading-tight">
+            <span className="text-4xl font-audiowide text-blue-600">AICO</span>
+            <p className="text-xs font-audiowide text-blue-600 -mt-1">AI Consulting</p>
           </div>
 
           <div className="flex items-center gap-4">
@@ -54,25 +55,6 @@ export default function Header() {
 
           </div>
         </div>
-
-        {/* Mobile Navigation */}
-        {isMobile && isMenuOpen && (
-          <nav className="md:hidden py-4 border-t border-blue-900/20">
-            <ul className="flex flex-col space-y-4">
-              {navItems.map((item, index) => (
-                <li key={index}>
-                  <Link
-                    href={item.href}
-                    className="text-sm font-medium text-blue-100 hover:text-blue-400 transition-colors"
-                    onClick={() => setIsMenuOpen(false)}
-                  >
-                    {item.name}
-                  </Link>
-                </li>
-              ))}
-            </ul>
-          </nav>
-        )}
       </div>
     </header>
   )

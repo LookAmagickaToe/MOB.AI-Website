@@ -50,8 +50,8 @@ export default function ProblemStatementSection() {
               </p>
               <p className="text-xl text-blue-100">
                 {language === "en" ?
-                "The cost of hiring specialized AI talent is prohibitive for most small businesses, creating an innovation gap between enterprises and SMEs." :
-                "Die Kosten für die Einstellung spezialisierter KI-Fachkräfte sind für die meisten kleinen Unternehmen zu hoch – das schafft eine Innovationslücke zwischen Großunternehmen und dem Mittelstand."}
+                "However, the costs of hiring specialized AI professionals are too high for most SMEs – creating an innovation gap that threatens the middle class." :
+                "Jedoch sind die Kosten für die Einstellung spezialisierter KI-Fachkräfte für die meisten kleinen Unternehmen zu hoch – das schafft eine Innovationslücke die den Mittelstand Gefährden."}
               </p>
               <p className="text-xl text-blue-100">
                 {language === "en" ?

@@ -37,20 +37,24 @@ export default function ValuePropositionSection() {
   return (
     <section className="w-full py-20">
       <div className="container px-4 md:px-6 mx-auto">
-        <h2 className="text-3xl md:text-4xl font-bold mb-5 text-center text-blue-400">{language === "en" ? "Our Approach" : "Unser Ansatz"}</h2>
+        <h2 className="text-3xl md:text-4xl font-bold mb-5 text-center text-blue-400">{language === "en" ? "Our mission: To close this innovation gap for you – practical, accessible, and affordable." : "Unsere Mission: Diese Innovationslücke für Sie zu schließen – praxisnah, verständlich und bezahlbar."}</h2>
         <p className="text-xl text-center text-blue-100 mb-10">
           {language === "en"
             ? "We focus on AI Agents – intelligent digital assistants that take over repetitive tasks, freeing up your employees to concentrate on value-creating activities."
           :"Wir konzentrieren uns auf AI Agents – intelligente digitale Assistenten, die wiederkehrende Aufgaben übernehmen und Ihre Mitarbeiter entlasten, damit sie sich auf wertschöpfende Tätigkeiten konzentrieren können."}
         </p>
         <div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-          <div className="relative h-[400px] rounded-lg overflow-hidden border border-blue-900/30">
-            <Image
-              src="/valueproposition.png?height=400&width=600"
-              alt="Value Proposition"
-              fill
-              className="object-cover rounded-lg"
-            />
+          <div className="px-4 md:px-6"> {/* Added padding wrapper */}
+            <div className="relative w-full max-w-md mx-auto rounded-lg overflow-hidden border border-blue-900/30">
+              <Image
+                src="/valueproposition.png"
+                alt="Value Proposition"
+                layout="responsive"
+                width={600}
+                height={400}
+                className="object-contain rounded-lg"
+              />
+            </div>
           </div>
           <div className="space-y-10">
             {valuePoints.map((point, index) => (

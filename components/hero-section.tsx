@@ -50,13 +50,13 @@ export default function HeroSection() {
       </section>
   
       <section className="w-full py-10 ">
-        <div className="container px-4 mb-20 md:px-6 mx-auto text-center">
+        <div className="container px-4 mb-15 md:px-6 mx-auto text-center">
           <p className="text-2xl md:text-3xl font-semibold text-blue-500 uppercase tracking-wide mb-10">
             {language === "en"
               ? "We are proud to be supported by"
-              : "Wir werden unterstützt von"}
+              : "Wir sind stolz von"}
           </p>
-          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20">
+          <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 mb-10">
             <Image
               src="/utum.png"
               alt="Unternehmertum"
@@ -79,6 +79,11 @@ export default function HeroSection() {
               className="object-contain"
             />
           </div>
+          <p className="text-2xl md:text-3xl font-semibold text-blue-500 uppercase tracking-wide mb-10">
+            {language === "en"
+              ? ""
+              : "unterstützt zu werden."}
+          </p> 
         </div>
       </section>
 
