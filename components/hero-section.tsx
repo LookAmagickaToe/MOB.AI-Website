@@ -17,7 +17,7 @@ export default function HeroSection() {
         <div className="container px-4 md:px-6 mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-center">
             <div className="flex flex-col space-y-6">
-              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tight text-blue-600">
+              <h1 className="text-4xl md:text-5xl lg:text-6xl font-bold tracking-tigh"style={{ color: '#0101FB' }}>
                 {language === "en"
                   ? "Empowering SMEs with AI Solutions"
                   : "Entfalten Sie das Potential von KI in Ihrem Unternehmen"}
@@ -29,7 +29,8 @@ export default function HeroSection() {
               </p>
               <div className="pt-4">
                 <Button
-                  className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-md"
+                  className=" hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-md" 
+                  style={{ backgroundColor: '#0101FB' }}
                   onClick={scrollToContact}
                 >
                   {language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}
