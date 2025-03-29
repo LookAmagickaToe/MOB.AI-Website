@@ -11,10 +11,10 @@ const audiowide = Audiowide({ subsets: ["latin"], weight: "400", variable: "--fo
 const inter = Inter({ subsets: ["latin"] })
 
 export const metadata: Metadata = {
-  title: "AI Solutions for SMEs",
+  title: "ISAR AI",
   description: "Empowering small and medium enterprises with accessible AI Agent solutions",
   openGraph: {
-    title: "AI Solutions for SMEs",
+    title: "ISAR AI",
     description: "Empowering small and medium enterprises with accessible AI Agent solutions",
     url: "https://mob-ai-website.vercel.app/",
     siteName: "MOB.AI",
@@ -23,7 +23,7 @@ export const metadata: Metadata = {
         url: "https://mob-ai-website.vercel.app/bg-image.jpeg",
         width: 1200,
         height: 630,
-        alt: "AI Solutions for SMEs",
+        alt: "ISAR AI",
       },
     ],
     locale: "en_US",

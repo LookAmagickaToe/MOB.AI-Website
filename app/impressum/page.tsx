@@ -41,7 +41,7 @@ export default function ImpressumPage() {
         </h2>
         <p>
           {isGerman ? "Telefon" : "Phone"}: +49 174 6247815<br />
-          E-Mail: maxime.christian@manageandmore.de
+          E-Mail: info@isarai.de
         </p>
       </section>
 

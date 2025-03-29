@@ -37,7 +37,7 @@ export default function ContactSection() {
                   <Mail className="h-6 w-6 text-blue-500 mt-1" />
                   <div>
                     <h4 className="font-medium text-lg text-blue-300">Email</h4>
-                    <p className="overflow-auto whitespace-nowrap text-blue-100">maxime.christian@manageandmore.de</p>
+                    <p className="overflow-auto whitespace-nowrap text-blue-100">kontakt@isarai.de</p>
                   </div>
                 </CardContent>
               </Card>
@@ -69,7 +69,7 @@ export default function ContactSection() {
             </div>
 
             <div className="mt-8">
-            <a href="mailto:maxime.christian@manageandmore.de">
+            <a href="mailto:info@isarai.de">
               <Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-md w-full">
                 {language === "en" ? "Send us a Message" : "Sende uns eine Nachricht"}
               </Button>
