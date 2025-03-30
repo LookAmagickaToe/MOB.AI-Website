@@ -73,6 +73,34 @@ export default function ImpressumPage() {
             : "This website is for informational purposes only. The content has been created with the utmost care, but we assume no responsibility for the accuracy, completeness, or timeliness of the information."}
         </p>
       </section>
+      <section id="datenschutz" className="mt-12">
+        <h2 className="text-xl font-semibold mb-2">
+          {isGerman ? "Datenschutzerklärung" : "Privacy Policy"}
+        </h2>
+        <p className="mb-4">
+          {isGerman
+            ? "Diese Website verwendet keine eigenen Cookies und erhebt keine personenbezogenen Daten ohne Ihre Zustimmung."
+            : "This website does not use its own cookies and does not collect personal data without your consent."}
+        </p>
+        <p className="mb-4">
+          {isGerman
+            ? "Wir verwenden jedoch eingebettete Inhalte von Drittanbietern, insbesondere den Kalenderdienst Calendly. Beim Laden dieser Inhalte können durch Calendly Cookies gesetzt und personenbezogene Daten verarbeitet werden. Die Nutzung des eingebetteten Kalenders erfolgt freiwillig."
+            : "However, we use embedded third-party content, particularly the calendar service Calendly. When these contents are loaded, Calendly may set cookies and process personal data. Using the embedded calendar is voluntary."}
+        </p>
+        <p>
+          {isGerman
+            ? "Weitere Informationen finden Sie in der Datenschutzerklärung von Calendly: "
+            : "For more information, please refer to Calendly’s privacy policy: "}
+          <a
+            href="https://calendly.com/privacy"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="underline text-blue-400"
+          >
+            https://calendly.com/privacy
+          </a>
+        </p>
+      </section>
     </main>
     </>
   )
