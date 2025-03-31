@@ -56,8 +56,8 @@ export default function HeroSection() {
         <div className="container px-4 mb-15 md:px-6 mx-auto text-center">
           <p className="text-2xl md:text-3xl font-semibold text-blue-500 uppercase tracking-wide mb-10">
             {language === "en"
-              ? "We are proud to be supported by"
-              : "Wir sind stolz von"}
+              ? "Supported by"
+              : "Unterstützt von"}
           </p>
           <div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 mb-10">
             <Image
@@ -82,11 +82,6 @@ export default function HeroSection() {
               className="object-contain"
             />
           </div>
-          <p className="text-2xl md:text-3xl font-semibold text-blue-500 uppercase tracking-wide mb-10">
-            {language === "en"
-              ? ""
-              : "unterstützt zu werden."}
-          </p> 
         </div>
       </section>
       <CookieConsent
