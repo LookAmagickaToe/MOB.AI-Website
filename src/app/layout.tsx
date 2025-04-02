@@ -1,6 +1,6 @@
 import type React from "react";
 import type { Metadata } from "next";
-import { Inter, Audiowide, Space_Mono, Jersey_10, Roboto, Poppins, Instrument_Serif, Fira_Mono } from "next/font/google";
+import { Inter, Lato, Space_Mono, Jersey_10, Roboto, Poppins, Instrument_Serif, Fira_Mono } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/providers/theme";
 import Header from "@/components/Header";
@@ -9,7 +9,7 @@ import { LanguageProvider } from "@/providers/language";
 
 // const font = Cutive_Mono({ subsets: ["latin"], weight: "400", variable: "--font-body" });
 const body = Space_Mono({ subsets: ["latin"], weight: ["400"], variable: "--font-body" });
-const heading = Instrument_Serif({ subsets: ["latin"], weight: ["400"], variable: "--font-heading" });
+const heading = Inter({ subsets: ["latin"], weight: ["400"], variable: "--font-heading" });
 
 export const metadata: Metadata = {
 	applicationName: "ISAR AI",

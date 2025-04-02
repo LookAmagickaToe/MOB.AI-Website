@@ -43,7 +43,7 @@ export default function Hero() {
 
 			<section className="w-full py-10">
 				<div className="mb-15 mx-auto text-center">
-					<h1 className="text-2xl md:text-6xl font-heading mb-10">{language === "en" ? "Supported by" : "Unterstützt von"}</h1>
+					<h1 className="text-2xl md:text-4xl font-heading mb-10">{language === "en" ? "Supported by" : "Unterstützt von"}</h1>
 					<div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 mb-10">
 						<Image src="/unternehmertum.svg" alt="Unternehmertum" height={0} width={90} className="object-contain" />
 						<Image src="/manage-and-more.svg" alt="Manage and More" height={0} width={240} className="object-contain" />
