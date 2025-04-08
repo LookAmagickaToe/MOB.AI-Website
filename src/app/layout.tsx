@@ -43,7 +43,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="dark">
-			<body className={`${body.className} ${heading.variable} text-foreground min-h-screen flex flex-col`}>
+			<body className={`${body.className} ${heading.variable} text-foreground min-h-screen flex flex-col overflow-y-scroll overflow-x-hidden`}>
 				<ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
 					<LanguageProvider>
 						<Header />

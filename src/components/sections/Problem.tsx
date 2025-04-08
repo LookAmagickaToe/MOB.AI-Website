@@ -5,6 +5,7 @@ import { BarChartIcon as ChartBar, TrendingUp, AlertCircle } from "lucide-react"
 import { useLanguage } from "@/providers/language";
 import SectionWithLeftHeading from "../section-with-left-heading";
 import Link from "next/link";
+import Text from "../Text";
 
 export default function ProblemStatement() {
 	const { language } = useLanguage();
@@ -32,19 +33,13 @@ export default function ProblemStatement() {
 	];
 
 	const rightSide = (
-		<div className="h-full p-8 gap-8 grid grid-rows-2">
+		<div className="h-full p-4 gap-4 grid grid-rows-2 bg-muted/10">
 			{stats.map((stat, index) => (
 				<Link key={index} href={stat.link} target="_blank" rel="noopener noreferrer" className="block transition-transform hover:scale-[1.02]">
 					<Card key={index} className="h-full w-full flex items-center justify-center border-dashed ">
-						<CardContent className="flex items-center justify-end">
-							{/* <div className="flex items-center justify-center gap-4">{stat.icon}</div> */}
-							<div className="flex flex-col items-center justify-center gap-4">
-								<h1 className="text-7xl font-heading">{stat.eyecatcher}</h1>
-								<h3 className="text-4xl font-heading">{language === "en" ? stat.value : stat.valuegerman}</h3>
-
-								{/* <p className="text-muted-foreground">{language === "en" ? stat.label : stat.labelgerman}</p> */}
-								{/* <p className="text-sm text-muted-foregrouund/20 mt-1 italic">{stat.source}</p> */}
-							</div>
+						<CardContent className="flex items-center justify-center flex-col text-muted-foreground gap-4">
+							<h1 className="text-accent-foreground">{stat.eyecatcher}</h1>
+							<span className="text-xl text-muted-foreground">{language === "en" ? stat.value : stat.valuegerman}</span>
 						</CardContent>
 					</Card>
 				</Link>
@@ -52,28 +47,49 @@ export default function ProblemStatement() {
 		</div>
 	);
 
+	const text = {
+		en: {
+			title: <>The Cost Advantage of Is Too Great to Ignore</>,
+			description: [
+				<>
+					{"Small and medium-sized enterprises (SMEs) face a decisive challenge: "}
+					<mark>
+						the integration of <mark>AI</mark> is no longer optional
+					</mark>
+					{" but increasingly vital for survival."}
+				</>,
+				<>However, the costs of hiring specialized AI professionals are too high for most SMEs – creating an innovation gap that threatens the middle class.</>,
+				<>Without accessible AI solutions, SMEs risk falling behind in efficiency, customer experience, and market competitiveness in an increasingly AI-driven economy.</>,
+			],
+			buttonText: "Learn More",
+			supportedBy: "Supported by",
+		},
+		de: {
+			title: <>Der Kostenvorteil durch KI ist zu groß, um ignoriert zu werden.</>,
+			description: [
+				<>
+					Der Mittelstand steht vor einer entscheidenden Herausforderung: Die Integration von Künstlicher Intelligenz (KI) ist nicht mehr optional, sondern zunehmend
+					überlebenswichtig.
+				</>,
+				<>
+					Jedoch sind die Kosten für die Einstellung spezialisierter KI-Fachkräfte für die meisten kleinen Unternehmen zu hoch – das schafft eine Innovationslücke die den
+					Mittelstand Gefährden.
+				</>,
+				<>Ohne zugängliche KI-Lösungen drohen KMUs in einer zunehmend KI-getriebenen Wirtschaft in den Bereichen Effizienz, Kundenerlebnis und Wettbewerbsfähigkeit zurückzufallen.</>,
+			],
+			buttonText: "Mehr erfahren",
+			supportedBy: "Unterstützt von",
+		},
+	};
+
+	const { title, description, buttonText, supportedBy } = text[language];
+
 	return (
-		<SectionWithLeftHeading
-			heading={language === "en" ? "The Cost Advantage of AI Is Too Great to Ignore" : "Der Kostenvorteil durch KI ist zu groß, um ignoriert zu werden."}
-			subheading={""}
-			rightSide={rightSide}
-		>
+		<SectionWithLeftHeading heading={title} subheading={""} rightSide={rightSide}>
 			<div className="space-y-6 text-muted-foreground">
-				<p className="text-lg">
-					{language === "en"
-						? "Small and medium-sized enterprises (SMEs) face a decisive challenge: the integration of Artificial Intelligence (AI) is no longer optional but increasingly vital for survival."
-						: "Der Mittelstand steht vor einer entscheidenden Herausforderung: Die Integration von Künstlicher Intelligenz (KI) ist nicht mehr optional, sondern zunehmend überlebenswichtig. "}
-				</p>
-				<p className="text-lg">
-					{language === "en"
-						? "However, the costs of hiring specialized AI professionals are too high for most SMEs – creating an innovation gap that threatens the middle class."
-						: "Jedoch sind die Kosten für die Einstellung spezialisierter KI-Fachkräfte für die meisten kleinen Unternehmen zu hoch – das schafft eine Innovationslücke die den Mittelstand Gefährden."}
-				</p>
-				<p className="text-lg">
-					{language === "en"
-						? "Without accessible AI solutions, SMEs risk falling behind in efficiency, customer experience, and market competitiveness in an increasingly AI-driven economy."
-						: "Ohne zugängliche KI-Lösungen drohen KMUs in einer zunehmend KI-getriebenen Wirtschaft in den Bereichen Effizienz, Kundenerlebnis und Wettbewerbsfähigkeit zurückzufallen."}
-				</p>
+				{description.map((paragraph, index) => (
+					<Text key={index}>{paragraph}</Text>
+				))}
 			</div>
 		</SectionWithLeftHeading>
 	);

@@ -14,14 +14,14 @@ export default function Mission() {
 			descriptiongerman: " Anders als übliche starre Softwarelösungen lassen sich AI Agents problemlos in Ihre bestehenden Systeme und Abläufe integrieren.",
 			title: "Seamless Integration",
 			description: "Unlike traditional rigid software solutions, AI agents can be effortlessly integrated into your existing systems and workflows.",
-			icon: <PlugZap className="size-8 flex-shrink-0 mt-1" />,
+			icon: <PlugZap className="size-14 flex-shrink-0 mt-1" strokeWidth={1} />,
 		},
 		{
 			titlegerman: "Branchenspezifische Anpassung",
 			descriptiongerman: "Unsere AI Agents können für Ihre spezifischen Branchenanforderungen angepasst werden.",
 			title: "Industry-Specific Customization",
 			description: "Our AI agents can be tailored to meet the specific needs and requirements of your industry.",
-			icon: <Sliders className="size-8 flex-shrink-0 mt-1" />,
+			icon: <Sliders className="size-14 flex-shrink-0 mt-1" strokeWidth={1} />,
 		},
 		{
 			titlegerman: "DSGVO-konform und sicher",
@@ -30,7 +30,7 @@ export default function Mission() {
 			title: "GDPR-Compliant and Secure",
 			description:
 				"We place the highest priority on data protection, enabling you to harness the benefits of artificial intelligence without compromising your customers' privacy or the security of your data.",
-			icon: <ShieldCheck className="size-8  flex-shrink-0 mt-1" />,
+			icon: <ShieldCheck className="size-14 flex-shrink-0 mt-1" strokeWidth={1} />,
 		},
 	];
 
@@ -48,12 +48,12 @@ export default function Mission() {
 					: "Wir konzentrieren uns auf AI Agents – intelligente digitale Assistenten, die wiederkehrende Aufgaben übernehmen und Ihre Mitarbeiter entlasten, damit sie sich auf wertschöpfende Tätigkeiten konzentrieren können."
 			}
 		>
-			<div className="py-20 px-4 md:px-6 ">
-				<div className="grid grid-cols-1 lg:grid-cols-2 gap-16 items-center">
-					<div className="px-4 md:px-6">
+			<div className="pb-10 px-4 md:px-6 ">
+				<div className="grid grid-cols-1 lg:grid-cols-2 gap-8 items-center">
+					<div className="">
 						{/* Added padding wrapper */}
-						<div className="relative w-full max-w-md mx-auto rounded-lg overflow-hidden border border-blue-900/30">
-							<Image src="/valueproposition.png" alt="Value Proposition" layout="responsive" width={600} height={400} className="object-contain rounded-lg" />
+						<div className="relative w-full  rounded-lg overflow-hidden">
+							<Image src="/valueproposition.png" alt="Value Proposition" layout="responsive" width={600} height={600} className="object-contain rounded-lg" />
 						</div>
 					</div>
 					<div className="space-y-4">
@@ -62,7 +62,7 @@ export default function Mission() {
 								<CardContent className="flex items-start gap-4">
 									{point.icon}
 									<div>
-										<h3 className="text-3xl font-heading mb-2 ">{language === "en" ? point.title : point.titlegerman}</h3>
+										<h3 className=" mb-2 ">{language === "en" ? point.title : point.titlegerman}</h3>
 										<p className="text-muted-foreground">{language === "en" ? point.description : point.descriptiongerman}</p>
 									</div>
 								</CardContent>

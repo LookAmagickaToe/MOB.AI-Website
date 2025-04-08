@@ -1,7 +1,7 @@
 export default function Banner() {
 	return (
 		<section className="w-full py-16">
-			<div className="container px-4 md:px-6 mx-auto">
+			<div className="px-4 md:px-6 mx-auto">
 				<div className="grid grid-cols-1 md:grid-cols-2 gap-8">
 					<div className="flex flex-col p-6 bg-card rounded-lg border border-blue-900/30 card-relief">
 						<blockquote className="text-xl italic text-blue-100">

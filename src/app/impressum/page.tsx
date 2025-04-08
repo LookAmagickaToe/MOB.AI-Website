@@ -19,10 +19,10 @@ export default function ImpressumPage() {
 			</header>
 
 			<main className="max-w-3xl mx-auto py-16 px-6">
-				<h1 className="text-3xl font-bold mb-6">{isGerman ? "Impressum" : "Legal Notice"}</h1>
+				<h1>{isGerman ? "Impressum" : "Legal Notice"}</h1>
 
 				<section className="mb-8">
-					<h2 className="text-xl font-semibold mb-2">{isGerman ? "Angaben gemäß § 5 TMG" : "Information according to § 5 TMG"}</h2>
+					<h2 className=" mb-2">{isGerman ? "Angaben gemäß § 5 TMG" : "Information according to § 5 TMG"}</h2>
 					<p>
 						Maxime Christian
 						<br />
@@ -34,7 +34,7 @@ export default function ImpressumPage() {
 				</section>
 
 				<section className="mb-8">
-					<h2 className="text-xl font-semibold mb-2">{isGerman ? "Kontakt" : "Contact"}</h2>
+					<h2 className=" mb-2">{isGerman ? "Kontakt" : "Contact"}</h2>
 					<p>
 						{isGerman ? "Telefon" : "Phone"}: +49 174 6247815
 						<br />
@@ -43,9 +43,7 @@ export default function ImpressumPage() {
 				</section>
 
 				<section className="mb-8">
-					<h2 className="text-xl font-semibold mb-2">
-						{isGerman ? "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV" : "Responsible for content according to § 55 Abs. 2 RStV"}
-					</h2>
+					<h2 className=" mb-2">{isGerman ? "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV" : "Responsible for content according to § 55 Abs. 2 RStV"}</h2>
 					<p>
 						Maxime Christian
 						<br />
@@ -55,7 +53,7 @@ export default function ImpressumPage() {
 				</section>
 
 				<section>
-					<h2 className="text-xl font-semibold mb-2">{isGerman ? "Haftungsausschluss" : "Disclaimer"}</h2>
+					<h2 className=" mb-2">{isGerman ? "Haftungsausschluss" : "Disclaimer"}</h2>
 					<p className="mb-4">
 						{isGerman
 							? "Trotz sorgfältiger inhaltlicher Kontrolle übernehmen wir keine Haftung für die Inhalte externer Links. Für den Inhalt der verlinkten Seiten sind ausschließlich deren Betreiber verantwortlich."
@@ -68,7 +66,7 @@ export default function ImpressumPage() {
 					</p>
 				</section>
 				<section id="datenschutz" className="mt-12">
-					<h2 className="text-xl font-semibold mb-2">{isGerman ? "Datenschutzerklärung" : "Privacy Policy"}</h2>
+					<h2 className=" mb-2">{isGerman ? "Datenschutzerklärung" : "Privacy Policy"}</h2>
 					<p className="mb-4">
 						{isGerman
 							? "Diese Website verwendet keine eigenen Cookies und erhebt keine personenbezogenen Daten ohne Ihre Zustimmung."

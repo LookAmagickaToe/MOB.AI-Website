@@ -48,7 +48,7 @@ export default function UseCases() {
 			titleGerman: "Marketing & Content-Erstellung",
 			descriptionGerman: "Autoatisierte erstellung von personalisierten Marketing-Inhalten, Verwaltung von Social Media und Automatisierung von Content-Erstellung.",
 			description: "Generate personalized marketing content, manage social media, and automate content creation.",
-			image: <Palette className="size-20" />,
+			image: <Palette className="size-20" strokeWidth={1} />,
 		},
 	];
 
@@ -61,10 +61,10 @@ export default function UseCases() {
 	};
 
 	return (
-		<section className="container w-full py-20">
-			<div className=" px-4 md:px-6 mx-auto">
-				<div className="flex justify-between items-center mb-12">
-					<h2 className="text-4xl md:text-6xl font-heading">{language === "en" ? "Example Use Cases" : "Beispiel Anwendungen"}</h2>
+		<section className="section-with-lines">
+			<div className="overflow-hidden">
+				<div className="flex justify-between items-center my-10 px-4">
+					<h2>{language === "en" ? "Example Use Cases" : "Beispiel Anwendungen"}</h2>
 					{!isMobile && (
 						<div className="flex space-x-2">
 							<Button variant="outline" size="icon" onClick={() => scroll("left")} aria-label="Scroll left">
@@ -77,12 +77,16 @@ export default function UseCases() {
 					)}
 				</div>
 
-				<div ref={scrollContainerRef} className="flex overflow-x-auto space-x-6 pb-6 -mx-4 px-4 scrollbar-hide" style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}>
+				<div
+					ref={scrollContainerRef}
+					className="flex overflow-x-auto space-x-4 py-4 -mx-4 px-8 bg-muted/10  border-t scrollbar-hide no-scrollbar"
+					style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
+				>
 					{useCases.map((useCase, index) => (
 						<Card key={index} className="flex-shrink-0 w-[300px] md:w-[400px] bg-card border border-dashed p-4 justify-start flex flex-col">
 							<div className="relative mx-auto text-muted-foreground">{useCase.image}</div>
 							<CardContent className="p-6">
-								<h3 className="text-3xl font-heading">{language === "en" ? useCase.title : useCase.titleGerman}</h3>
+								<h3>{language === "en" ? useCase.title : useCase.titleGerman}</h3>
 								<p className="mt-4 text-muted-foreground text-justify">{language === "en" ? useCase.description : useCase.descriptionGerman}</p>
 							</CardContent>
 						</Card>

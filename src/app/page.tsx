@@ -8,14 +8,18 @@ import Mission from "@/components/sections/Mission";
 
 export default function Home() {
 	return (
-		<div className="relative divide-y divide-dashed">
-			<Hero />
-			<Problem />
-			<Mission />
-			<Approach />
-			<Team />
-			<UseCases />
-			<Contact />
+		<div className="max-w-screen-xl mx-auto grid min-h-dvh justify-center grid-cols-[2.5rem_minmax(0,_1fr)_2.5rem]">
+			<div className="bg-dashes-grid border-x"></div>
+			<div className="">
+				<Hero />
+				<Problem />
+				<Mission />
+				<Approach />
+				<Team />
+				<UseCases />
+				<Contact />
+			</div>
+			<div className="bg-dashes-grid border-x"></div>
 		</div>
 	);
 }
