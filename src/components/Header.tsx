@@ -33,12 +33,12 @@ export default function Header() {
 						<span className="h-full flex items-center font-semibold text-sky-400 text-[28px] leading-none ">AI</span>
 					</div>
 					<div className="flex items-center gap-2 sm:gap-4">
-						<button onClick={scrollToContact} className="uppercase group relative px-2 sm:px-8 text-xs sm:text-md text-sky-400 h-9">
+						<button onClick={scrollToContact} className="uppercase group relative px-2 sm:px-8 text-xs sm:text-base text-sky-400 h-9">
 							<span className="absolute inset-0 border border-dashed border-sky-300/60 bg-sky-400/10 group-hover:bg-sky-400/15 dark:border-sky-300/30"></span>
 							{language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}
 						</button>
 
-						<Button variant="outline" onClick={toggleLanguage} size={"sm"}>
+						<Button variant="secondary" onClick={toggleLanguage} size={"sm"}>
 							{language === "en" ? "DE" : "EN"}
 						</Button>
 					</div>
