@@ -1,12 +1,9 @@
 "use client";
 
-import { useLanguage } from "@/providers/language";
 import Link from "next/link";
 
 export default function ImpressumPage() {
-	const { language } = useLanguage();
-
-	const isGerman = language === "de";
+	const isGerman = true;
 
 	return (
 		<>
