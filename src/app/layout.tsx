@@ -1,5 +1,5 @@
 import type React from "react";
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Lato, Space_Mono, Jersey_10, Roboto, Poppins, Instrument_Serif, Fira_Mono } from "next/font/google";
 import "@/app/globals.css";
 import { ThemeProvider } from "@/providers/theme";
@@ -10,6 +10,10 @@ import { LanguageProvider } from "@/providers/language";
 // const font = Cutive_Mono({ subsets: ["latin"], weight: "400", variable: "--font-body" });
 const body = Space_Mono({ subsets: ["latin"], weight: ["400"], variable: "--font-body" });
 const heading = Inter({ subsets: ["latin"], weight: ["400"], variable: "--font-heading" });
+
+export const viewport: Viewport = {
+	themeColor: { color: "hsl(240 10% 3.9%)" },
+};
 
 export const metadata: Metadata = {
 	applicationName: "ISAR AI",
@@ -43,15 +47,7 @@ export default function RootLayout({
 }>) {
 	return (
 		<html lang="en" className="dark">
-			<body className={`${body.className} ${heading.variable} text-foreground min-h-screen flex flex-col overflow-y-scroll overflow-x-hidden`}>
-				<ThemeProvider attribute="class" defaultTheme="dark" forcedTheme="dark">
-					<LanguageProvider>
-						<Header />
-						<main className={`flex-grow `}>{children}</main>
-						<Footer />
-					</LanguageProvider>
-				</ThemeProvider>
-			</body>
+			<body className={`${body.className} ${heading.variable} text-foreground min-h-screen flex flex-col overflow-y-scroll overflow-x-hidden`}>{children}</body>
 		</html>
 	);
 }

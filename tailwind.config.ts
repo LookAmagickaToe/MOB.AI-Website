@@ -19,7 +19,7 @@ const config: Config = {
 			},
 			colors: {
 				border: "hsl(var(--border))",
-				input: "hsl(var(--input))",
+				input: "oklch(var(--input) / 0.2)",
 				ring: "hsl(var(--ring))",
 				background: "hsl(var(--background))",
 				foreground: "hsl(var(--foreground))",
@@ -40,7 +40,7 @@ const config: Config = {
 					foreground: "hsl(var(--muted-foreground))",
 				},
 				accent: {
-					DEFAULT: "oklch(var(--accent))",
+					DEFAULT: "oklch(var(--accent) / 0.1)",
 					foreground: "oklch(var(--accent-foreground))",
 				},
 				// accent: {

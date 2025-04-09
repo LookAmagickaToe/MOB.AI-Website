@@ -15,7 +15,7 @@ export default function Team() {
 			biogerman:
 				"Maxime ist Informatikstudent an der TUM und der Universität Cambridge UK. Er hat als Freelancer an mehreren Projekten für KMU gearbeitet, insbesondere im Bereich der Digitalisierung von Geschäftsprozessen.",
 			bio: "Maxime is a computer science student at TUM and Cambridge University UK. He has been working as Freelancer on several projects for SME's especially in the field of Business process digitization.",
-			image: "/maxime.png?height=300&width=300",
+			image: "/maxime.png",
 			linkedin: "https://www.linkedin.com/in/maxime-christian-33189116b/",
 			logos: ["/tum.png", "/cambridge.png"],
 		},
@@ -24,7 +24,7 @@ export default function Team() {
 			biogerman:
 				"Oliver studiert Software Systems an der Uni Zürich, ist leidenschaftlicher Entwickler und war zuvor CTO bei peeka.ai. Er hat bereits mehrere Unternehmen als Freelancer bei Software & KI Projekten unterstützt.",
 			bio: "Oliver is studying Software Systems at the University of Zurich, is a passionate developer, and previously served as CTO at peeka.ai. He has already supported several companies as a freelancer on software and AI projects.",
-			image: "/oliver.png?height=300&width=300",
+			image: "/oliver2.jpg",
 			linkedin: "https://www.linkedin.com/in/oli-sommer/",
 			logos: ["/uzh.png", "/lmu.png"],
 		},
@@ -33,7 +33,7 @@ export default function Team() {
 			biogerman:
 				"Bruno hat an der LMU und am King’s College in London studiert und sich hierbei auf die Schnittstelle zwischen Business und KI fokussiert. Parallel hat er bei mehreren Top-Startups in München im Product Management gearbeitet.",
 			bio: "Bruno studied at LMU and King’s College London, focusing on the intersection of business and artificial intelligence. Alongside his studies, he worked in product management at several top startups in Munich.",
-			image: "/bruno.png?height=300&width=300",
+			image: "/bruno.jpg",
 			linkedin: "https://www.linkedin.com/in/bruno-polster/",
 			logos: ["/lmu.png", "/kingscollege.png"],
 		},
@@ -45,7 +45,7 @@ export default function Team() {
 				{founders.map((founder, index) => (
 					<div key={index} className="flex flex-col bg-card overflow-hidden border border-dashed rounded-lg mx-auto w-full ">
 						<div className="relative h-80 w-auto m-4 rounded overflow-hidden">
-							<Image src={founder.image || "/placeholder.svg"} alt={founder.name} fill className="object-cover" />
+							<Image src={founder.image || "/placeholder.svg"} alt={founder.name} fill className="object-cover object-top" />
 						</div>
 						<div className="p-6 flex flex-col flex-grow">
 							<div className="flex flex-col items-center justify-between mb-1">
@@ -65,9 +65,9 @@ export default function Team() {
 									))}
 								</div>
 							</div>
-							<p className="my-5 flex-grow text-muted-foreground text-justify">{language === "en" ? founder.bio : founder.biogerman}</p>
+							<p className="my-5 flex-grow text-muted-foreground">{language === "en" ? founder.bio : founder.biogerman}</p>
 
-							<Button variant="default" className="w-full" asChild>
+							<Button variant="ghost" className="w-full" asChild>
 								<Link href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="w-full">
 									Linkedin
 									<ArrowUpRight className="size-4" />

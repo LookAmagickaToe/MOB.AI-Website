@@ -17,9 +17,9 @@ export default function UseCases() {
 		{
 			title: "Customer Service & Support",
 			titleGerman: "Kundenservice & Support",
-			description: "Automate customer service and support with chatbots and AI-driven solutions.",
-			descriptionGerman: "Automatisieren Sie den Kundenservice und -support mit Chatbots und KI-gestützten Lösungen.",
-			image: <Bot className="size-20" strokeWidth={1} />,
+			description: "Automate customer service and support with AI-driven solutions.",
+			descriptionGerman: "Automatisieren Sie den Kundenservice und -support mit KI-gestützten Lösungen.",
+			image: <Bot className="size-14 text-accent-foreground" strokeWidth={1} />,
 		},
 		{
 			title: "Knowledge Management",
@@ -27,28 +27,28 @@ export default function UseCases() {
 			descriptionGerman:
 				"Organisieren, zentralisieren und entsperren Sie das Wissen Ihres Unternehmens - KI-Agenten helfen, Informationen effizient zu erfassen, zu strukturieren und abzurufen.",
 			description: "Organize, centralize, and unlock your company’s knowledge — AI agents help capture, structure, and retrieve information efficiently.",
-			image: <GraduationCap className="size-20" strokeWidth={1} />,
+			image: <GraduationCap className="size-14 text-accent-foreground" strokeWidth={1} />,
 		},
 		{
 			title: "Database Maintenance",
 			titleGerman: "Datenbankpflege",
 			descriptionGerman: "Automatisieren Sie Dateneingabe-, Bereinigungs- und Wartungsaufgaben, um Datenqualität und -konsistenz sicherzustellen.",
 			description: "Automate data entry, cleaning, and maintenance tasks to ensure data quality and consistency.",
-			image: <Construction className="size-20" strokeWidth={1} />,
+			image: <Construction className="size-14 text-accent-foreground" strokeWidth={1} />,
 		},
 		{
 			title: "Appointment Scheduling",
 			titleGerman: "Termin-management",
 			descriptionGerman: "Automatisierte Terminplanung und -erinnerungen, um Ausfälle zu reduzieren und die Kundenzufriedenheit zu verbessern.",
 			description: "Automate appointment scheduling and reminders to reduce no-shows and improve customer satisfaction.",
-			image: <Calendar className="size-20" strokeWidth={1} />,
+			image: <Calendar className="size-14 text-accent-foreground" strokeWidth={1} />,
 		},
 		{
 			title: "Marketing & Content Creation",
 			titleGerman: "Marketing & Content-Erstellung",
 			descriptionGerman: "Autoatisierte erstellung von personalisierten Marketing-Inhalten, Verwaltung von Social Media und Automatisierung von Content-Erstellung.",
 			description: "Generate personalized marketing content, manage social media, and automate content creation.",
-			image: <Palette className="size-20" strokeWidth={1} />,
+			image: <Palette className="size-14 text-accent-foreground" strokeWidth={1} />,
 		},
 	];
 
@@ -87,7 +87,7 @@ export default function UseCases() {
 							<div className="relative mx-auto text-muted-foreground">{useCase.image}</div>
 							<CardContent className="p-6">
 								<h3>{language === "en" ? useCase.title : useCase.titleGerman}</h3>
-								<p className="mt-4 text-muted-foreground text-justify">{language === "en" ? useCase.description : useCase.descriptionGerman}</p>
+								<p className="mt-4 text-muted-foreground sm:text-justify">{language === "en" ? useCase.description : useCase.descriptionGerman}</p>
 							</CardContent>
 						</Card>
 					))}
