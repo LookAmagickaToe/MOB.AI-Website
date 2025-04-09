@@ -12,7 +12,7 @@ export default function SectionWithLeftHeading({
 	return (
 		<section className="section-with-lines">
 			<div className="px-0 relative">
-				<div className="grid grid-cols-1 lg:grid-cols-2 items-start divide-x divide-dashed ">
+				<div className="grid grid-cols-1 lg:grid-cols-2 items-start lg:divide-x lg:divide-dashed ">
 					<div className="w-full ">
 						<div className="border-b border-muted border-dashed ">
 							<h2 className="px-8 py-8">{heading}</h2>

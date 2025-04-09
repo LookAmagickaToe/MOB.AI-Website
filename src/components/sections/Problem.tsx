@@ -12,44 +12,41 @@ export default function ProblemStatement() {
 	const stats = [
 		{
 			eyecatcher: "40%",
-			valuegerman: "Leistungssteigerung",
-			labelgerman: "KI kann die Leistung hochqualifizierter Arbeitskräfte um fast 40% steigern im Vergleich zu Mitarbeitern, die sie nicht nutzen",
-			value: "performance boost",
-			label: "AI can boost the performance of highly skilled workers by nearly 40% compared to employees who do not use it.",
+			valuegerman: "Effizienzsteigerung von Mitarbeitern, die KI richtig einsetzen",
+			value: "Efficiency Boost for Highly Skilled Workers applying AI",
 			icon: <TrendingUp className="size-12 text-muted" />,
-			source: "– Harvard Business School –",
+			source: "Harvard Business School, 2024",
 			link: "https://mitsloan.mit.edu/ideas-made-to-matter/how-generative-ai-can-boost-highly-skilled-workers-productivity",
 		},
 		{
 			eyecatcher: "70%",
-			valuegerman: "Know-How als Hürde bei 70% der KMUs",
-			labelgerman: "70% der KMUs in Deutschland nennen fehlendes technisches Know-how als größtes Hindernis bei der KI-Einführung.",
-			value: "of SMEs cite Know-How as Hurdle",
-			label: "in Germany cite a lack of technical expertise as the biggest obstacle to adopting AI.",
+			valuegerman: "der KMUs zitieren Mangel an Know-How als größte Hürde",
+			value: "of SMEs cite Know-How as biggest Hurdle",
 			icon: <AlertCircle className="size-12 text-muted" />,
-			source: "– Harvard Business School –",
+			source: "Mittelstand Digital, 2023",
 			link: "https://www.mittelstand-digital.de/MD/Redaktion/DE/Publikationen/ki-Studie-2023.pdf?__blob=publicationFile&v=4",
 		},
 	];
 
 	const rightSide = (
-		<div className="h-full p-4 gap-4 grid grid-rows-2 bg-muted/10">
+		<div className="h-full p-4 gap-4 grid grid-rows-2 bg-muted/10 border-t lg:border-none ">
 			{stats.map((stat, index) => (
-				<Link key={index} href={stat.link} target="_blank" rel="noopener noreferrer" className="block transition-transform hover:scale-[1.02]">
-					<Card key={index} className="h-full w-full flex items-center justify-center border-dashed ">
-						<CardContent className="flex items-center justify-center flex-col text-muted-foreground gap-4">
-							<h1 className="text-accent-foreground">{stat.eyecatcher}</h1>
-							<span className="text-xl text-muted-foreground">{language === "en" ? stat.value : stat.valuegerman}</span>
-						</CardContent>
-					</Card>
-				</Link>
+				<Card key={index} className="h-full w-full flex items-center justify-center border-dashed relative py-4">
+					<CardContent className="flex items-center justify-center flex-col text-muted-foreground gap-4  sm:py-0">
+						<h1 className="text-accent-foreground">{stat.eyecatcher}</h1>
+						<span className="text-sm sm:text-xl text-muted-foreground text-center">{language === "en" ? stat.value : stat.valuegerman}</span>
+						<Link key={index} href={stat.link} target="_blank" rel="noopener noreferrer" className="absolute bottom-2 right-2">
+							<span className="text-xs sm:text-sm text-muted-foreground/50 ">{stat.source}</span>
+						</Link>
+					</CardContent>
+				</Card>
 			))}
 		</div>
 	);
 
 	const text = {
 		en: {
-			title: <>The Cost Advantage of Is Too Great to Ignore</>,
+			title: <>The Cost Advantage of AI Is Now Too Great to Ignore.</>,
 			description: [
 				<>
 					{"Small and medium-sized enterprises (SMEs) face a decisive challenge: "}
@@ -65,17 +62,11 @@ export default function ProblemStatement() {
 			supportedBy: "Supported by",
 		},
 		de: {
-			title: <>Der Kostenvorteil durch KI ist zu groß, um ignoriert zu werden.</>,
+			title: <>Der Kostenvorteil durch KI ist jetzt zu groß, um ignoriert zu werden.</>,
 			description: [
-				<>
-					Der Mittelstand steht vor einer entscheidenden Herausforderung: Die Integration von Künstlicher Intelligenz (KI) ist nicht mehr optional, sondern zunehmend
-					überlebenswichtig.
-				</>,
-				<>
-					Jedoch sind die Kosten für die Einstellung spezialisierter KI-Fachkräfte für die meisten kleinen Unternehmen zu hoch – das schafft eine Innovationslücke die den
-					Mittelstand Gefährden.
-				</>,
-				<>Ohne zugängliche KI-Lösungen drohen KMUs in einer zunehmend KI-getriebenen Wirtschaft in den Bereichen Effizienz, Kundenerlebnis und Wettbewerbsfähigkeit zurückzufallen.</>,
+				<>Der Mittelstand steht vor einer entscheidenden Herausforderung:</>,
+				<>Wie Studien und Umfragen belegen, ist KI nicht mehr optimal, sondern überlebenswichtig.</>,
+				<>KI-Agenten revolutionieren schon heute Arbeitsprozesse in Unternehmen, indem Sie Mitarbeiter nicht ersetzen, sondern um ein vielfaches produktiver machen.</>,
 			],
 			buttonText: "Mehr erfahren",
 			supportedBy: "Unterstützt von",

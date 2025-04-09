@@ -53,14 +53,14 @@
     --muted: 240 3.7% 15.9%;
     /* --muted-foreground: 240 5% 64.9%; */
     --muted-foreground: 240 5% 70%;
-    --accent: 95.1% 0.026 236.824;
+    --accent: 74.6% 0.16 232.661;
     --accent-foreground: 74.6% 0.16 232.661;
     /* --accent: 240 3.7% 15.9%;
     --accent-foreground: 0 0% 98%; */
     --destructive: 0 62.8% 30.6%;
     --destructive-foreground: 0 85.7% 97.3%;
     --border: 240 3.7% 15.9%;
-    --input: 240 3.7% 15.9%;
+    --input: 74.6% 0.16 232.661;
     --ring: 240 4.9% 83.9%;
     --chart-1: 220 70% 50%;
     --chart-2: 160 60% 45%;
@@ -117,7 +117,7 @@
 
   /* Custom scrollbar styling. Thanks @pranathiperii. */
   ::-webkit-scrollbar {
-      width: 5px;
+      width: none;
   }
   ::-webkit-scrollbar-track {
       background: transparent;
@@ -127,20 +127,11 @@
       border-radius: 1px;
   }
   * {
-      scrollbar-width: 1px;
+      scrollbar-width: none;
       scrollbar-color: hsl(var(--border)) transparent;
   }
 
-  /* Hide scrollbar for Chrome, Safari and Opera */
-    .no-scrollbar::-webkit-scrollbar {
-      display: none;
-  }
-  
-  /* Hide scrollbar for IE, Edge and Firefox */
-    .no-scrollbar {
-      -ms-overflow-style: none; /* IE and Edge */
-      scrollbar-width: none; /* Firefox */
-    }
+
   
 
   h1, h2, h3, h4, h5, h6 {
@@ -151,13 +142,13 @@
     @apply text-6xl md:text-8xl font-heading;
   }
   h2 {
-    @apply text-4xl md:text-6xl font-heading;
+    @apply text-2xl md:text-6xl font-heading;
   }
   h3 {
     @apply text-2xl md:text-4xl font-heading;
   }
   h4 {
-    @apply text-xl md:text-2xl font-heading;
+    @apply text-lg md:text-2xl font-heading;
   }
   h5 {
     @apply text-lg md:text-xl font-heading;
@@ -236,5 +227,15 @@
     @apply relative w-full before:absolute before:top-0 before:h-px before:w-[200vw] before:bg-border before:-left-[100vw] after:absolute after:bottom-0 after:h-px after:w-[200vw] after:bg-border after:-left-[100vw]; 
   }
 
+  /* Hide scrollbar for Chrome, Safari and Opera */
+    .no-scrollbar::-webkit-scrollbar {
+      display: none;
+  }
+  
+  /* Hide scrollbar for IE, Edge and Firefox */
+    .no-scrollbar {
+      -ms-overflow-style: none; /* IE and Edge */
+      scrollbar-width: none; /* Firefox */
+    }
   
 }

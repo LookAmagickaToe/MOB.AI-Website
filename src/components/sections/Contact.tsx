@@ -41,7 +41,7 @@ export default function Contact() {
 			small
 			preheading={null}
 			heading={language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}
-			subheading={language === "en" ? "Schedule a Meeting or Write Us" : "Buche ein Treffen"}
+			subheading={language === "en" ? "Schedule a Meeting or Write Us" : "Buchen Sie ein 30-minütiges Erstgespräch"}
 		>
 			<div className="grid grid-cols-1 lg:grid-cols-1 gap-12 p-8">
 				{/* <div>
@@ -93,7 +93,7 @@ export default function Contact() {
 					<Cal namespace="isar-ai" calLink="sommertime/isar-ai" style={{ width: "100%", height: "100%", overflow: "scroll" }} config={{ layout: "month_view", theme: "dark" }} />
 				</div>
 			</div>
-			<div className="mx-auto text-center border-t p-4 flex justify-center gap-10">
+			<div className="mx-auto text-center border-t p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10">
 				<span className="text-accent-foreground flex gap-2 items-center">
 					<Mail className="size-4" />
 					kontakt@isarai.de
