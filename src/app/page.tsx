@@ -15,7 +15,7 @@ export default function Home() {
 		<LanguageProvider>
 			<Header />
 
-			<div className="max-w-screen-2xl mx-auto grid min-h-dvh justify-center grid-cols-[2rem_minmax(0,_1fr)_2rem] overflow-x-hidden no-scrollbar">
+			<div className="max-w-screen-2xl mx-auto grid min-h-dvh justify-center grid-cols-[1rem_minmax(0,_1fr)_1rem] sm:grid-cols-[2rem_minmax(0,_1fr)_2rem] overflow-x-hidden no-scrollbar">
 				<div className="bg-dashes-grid border-x"></div>
 				<div className="">
 					<Hero />

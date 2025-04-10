@@ -33,9 +33,10 @@ export default function Hero() {
 
 	return (
 		<>
-			<section className="w-full pt-4 pb-10 md:pt-24 md:pb-12 lg:pt-28 lg:pb-16 ">
-				<div className="px-4 md:px-6 mx-auto">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start sm:items-center h-full w-full">
+			{/* <section className="w-full pt-4 pb-10 md:pt-24 md:pb-12 lg:pt-28 lg:pb-16 px-4"></section> */}
+			<section className="w-full sm:h-[calc(100vh-100px)] bg-muted/10 p-4 sm:p-6">
+				<div className="p-4 sm:p-6 mx-auto border rounded bg-card">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start sm:items-center sm:h-[calc(100vh-100px-6rem)] w-full ">
 						<div className="flex flex-col space-y-6">
 							<div>{title}</div>
 							<p className="text-xl text-muted-foreground  max-w-[600px]">{description}</p>
