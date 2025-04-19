@@ -6,6 +6,7 @@ import { ThemeProvider } from "@/providers/theme";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import { LanguageProvider } from "@/providers/language";
+import { PostHogProvider } from "@/providers/posthog";
 
 // const font = Cutive_Mono({ subsets: ["latin"], weight: "400", variable: "--font-body" });
 const body = Space_Mono({ subsets: ["latin"], weight: ["400"], variable: "--font-body" });
@@ -40,14 +41,12 @@ export const metadata: Metadata = {
 	},
 };
 
-export default function RootLayout({
-	children,
-}: Readonly<{
-	children: React.ReactNode;
-}>) {
+export default function RootLayout({ children }: Readonly<{ children: React.ReactNode }>) {
 	return (
 		<html lang="en" className="dark">
-			<body className={`${body.className} ${heading.variable} text-foreground min-h-screen flex flex-col overflow-y-scroll overflow-x-hidden`}>{children}</body>
+			<body className={`${body.className} ${heading.variable} text-foreground min-h-screen flex flex-col overflow-y-scroll overflow-x-hidden`}>
+				<PostHogProvider>{children}</PostHogProvider>
+			</body>
 		</html>
 	);
 }
