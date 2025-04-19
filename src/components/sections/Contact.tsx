@@ -37,14 +37,15 @@ export default function Contact() {
 	}, [calendlyLoaded]);
 
 	return (
-		<SectionWithMiddleHeading
-			small
-			preheading={null}
-			heading={language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}
-			subheading={language === "en" ? "Schedule a Meeting or Write Us" : "Buchen Sie ein 30-minütiges Erstgespräch"}
-		>
-			<div className="grid grid-cols-1 lg:grid-cols-1 gap-12 p-8">
-				{/* <div>
+		<div id="contact">
+			<SectionWithMiddleHeading
+				small
+				preheading={null}
+				heading={language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}
+				subheading={language === "en" ? "Schedule your free 30-minute intro call – no strings attached." : "Buchen Sie ein unverbindliches 30-minütiges Erstgespräch"}
+			>
+				<div className="grid grid-cols-1 lg:grid-cols-1 gap-12 p-8">
+					{/* <div>
 					<h3 className="mb-9 ">{language === "en" ? "Contact Information" : "Kontaktinformation"}</h3>
 					<div className="space-y-4">
 						<Card className="bg-card border border-dashed  ">
@@ -88,22 +89,28 @@ export default function Contact() {
 					</div>
 				</div> */}
 
-				<div className="">
-					{/* <h3 className=" mb-8 ">{language === "en" ? "Schedule a Meeting" : "Buche ein Treffen"}</h3> */}
-					<Cal namespace="isar-ai" calLink="sommertime/isar-ai" style={{ width: "100%", height: "100%", overflow: "scroll" }} config={{ layout: "month_view", theme: "dark" }} />
+					<div className="">
+						{/* <h3 className=" mb-8 ">{language === "en" ? "Schedule a Meeting" : "Buche ein Treffen"}</h3> */}
+						<Cal
+							namespace="isar-ai"
+							calLink="sommertime/isar-ai"
+							style={{ width: "100%", height: "100%", overflow: "scroll" }}
+							config={{ layout: "month_view", theme: "dark" }}
+						/>
+					</div>
 				</div>
-			</div>
-			<div className="mx-auto text-center border-t p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10">
-				<span className="text-accent-foreground flex gap-2 items-center">
-					<Mail className="size-4" />
-					kontakt@isarai.de
-				</span>
+				<div className="mx-auto text-center border-t p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10">
+					<span className="text-accent-foreground flex gap-2 items-center">
+						<Mail className="size-4" />
+						kontakt@isarai.de
+					</span>
 
-				<span className="text-accent-foreground flex gap-2 items-center">
-					<Phone className="size-4" />
-					+49 174 624 78 15
-				</span>
-			</div>
-		</SectionWithMiddleHeading>
+					<span className="text-accent-foreground flex gap-2 items-center">
+						<Phone className="size-4" />
+						+49 174 624 78 15
+					</span>
+				</div>
+			</SectionWithMiddleHeading>
+		</div>
 	);
 }
