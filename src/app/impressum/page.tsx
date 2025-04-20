@@ -71,13 +71,13 @@ export default function ImpressumPage() {
 					</p>
 					<p className="mb-4">
 						{isGerman
-							? "Wir verwenden jedoch eingebettete Inhalte von Drittanbietern, insbesondere den Kalenderdienst Calendly. Beim Laden dieser Inhalte können durch Calendly Cookies gesetzt und personenbezogene Daten verarbeitet werden. Die Nutzung des eingebetteten Kalenders erfolgt freiwillig."
-							: "However, we use embedded third-party content, particularly the calendar service Calendly. When these contents are loaded, Calendly may set cookies and process personal data. Using the embedded calendar is voluntary."}
+							? "Wir verwenden jedoch eingebettete Inhalte von Drittanbietern, insbesondere den Kalenderdienst Cal.com. Beim Laden dieser Inhalte können durch Cal.com zu Authentifizierungszwecken Cookies gesetzt und personenbezogene Daten verarbeitet werden."
+							: "However, we use embedded content from third parties, in particular the calendar service Cal.com. When loading this content, cookies may be set and personal data may be processed by Cal.com for authentication purposes."}
 					</p>
 					<p>
-						{isGerman ? "Weitere Informationen finden Sie in der Datenschutzerklärung von Calendly: " : "For more information, please refer to Calendly’s privacy policy: "}
-						<a href="https://calendly.com/privacy" target="_blank" rel="noopener noreferrer" className="underline text-blue-400">
-							https://calendly.com/privacy
+						{isGerman ? "Weitere Informationen finden Sie in der Datenschutzerklärung von Cal.com: " : "For more information, please refer to Cal.com’s privacy policy: "}
+						<a href="https://cal.com/de/privacy" target="_blank" rel="noopener noreferrer" className="underline text-blue-400">
+							https://cal.com/de/privacy
 						</a>
 					</p>
 				</section>
