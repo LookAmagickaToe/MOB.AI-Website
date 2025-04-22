@@ -53,7 +53,7 @@ export default function Contact() {
 								<Mail className="h-6 w-6  mt-1" />
 								<div>
 									<h4>Email</h4>
-									<p className="overflow-auto whitespace-nowrap">kontakt@isarai.de</p>
+									<p className="overflow-auto whitespace-nowrap">info@isarai.de</p>
 								</div>
 							</CardContent>
 						</Card>
@@ -102,7 +102,7 @@ export default function Contact() {
 				<div className="mx-auto text-center border-t p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10">
 					<span className="text-accent-foreground flex gap-2 items-center">
 						<Mail className="size-4" />
-						kontakt@isarai.de
+						info@isarai.de
 					</span>
 
 					<span className="text-accent-foreground flex gap-2 items-center">
