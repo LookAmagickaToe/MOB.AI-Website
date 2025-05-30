@@ -2,6 +2,29 @@
 @tailwind components;
 @tailwind utilities;
 
+
+@theme {
+  --animate-marquee: marquee 20s infinite linear;
+  --animate-marquee-vertical: marquee-vertical 20s linear infinite;
+ 
+  @keyframes marquee {
+    from {
+      transform: translateX(0);
+    }
+    to {
+      transform: translateX(calc(-100% - 1rem));
+    }
+  }
+  @keyframes marquee-vertical {
+    from {
+      transform: translateY(0);
+    }
+    to {
+      transform: translateY(calc(-100% - 1rem));
+    }
+  }
+}
+
 @layer base {
   :root {
     --background: 0 0% 98%;
@@ -78,6 +101,10 @@
     --sidebar-border: 240 3.7% 15.9%;
     --sidebar-ring: 240 4.9% 83.9%;
   }
+  .theme {
+    --animate-marquee: marquee var(--duration) infinite linear;
+    --animate-marquee-vertical: marquee-vertical var(--duration) linear infinite;
+  }
 }
 
 @layer utilities {
@@ -132,9 +159,6 @@
       scrollbar-width: none;
       scrollbar-color: hsl(var(--border)) transparent;
   }
-
-
-  
 
   h1, h2, h3, h4, h5, h6 {
     @apply tracking-tighter text-foreground;
@@ -191,7 +215,6 @@
     @apply absolute -inset-4 shadow-xl rounded-xl border;
   }
 
-
   .border-grid {
     @apply border-border/50 dark:border-border border-dashed;
   }
@@ -233,11 +256,30 @@
     .no-scrollbar::-webkit-scrollbar {
       display: none;
   }
-  
+
   /* Hide scrollbar for IE, Edge and Firefox */
     .no-scrollbar {
       -ms-overflow-style: none; /* IE and Edge */
       scrollbar-width: none; /* Firefox */
     }
-  
+
 }
+
+@layer base {
+  * {
+    @apply border-border;
+  }
+  body {
+    @apply bg-background text-foreground;
+  }
+}
+
+/* @theme inline {
+  --animate-scroll: scroll var(--animation-duration, 40s) var(--animation-direction, forwards) linear infinite;
+ 
+  @keyframes scroll {
+    to {
+      transform: translate(calc(-50% - 0.5rem));
+    }
+  }
+} */

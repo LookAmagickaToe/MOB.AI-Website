@@ -33,11 +33,11 @@ export default function Hero() {
 
 	return (
 		<>
-			{/* <section className="w-full pt-4 pb-10 md:pt-24 md:pb-12 lg:pt-28 lg:pb-16 px-4"></section> */}
 			<section className="w-full sm:h-[calc(100vh-100px)] bg-muted/10 p-4 sm:p-6">
 				<div className="p-4 sm:p-6 mx-auto border rounded bg-card">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start sm:items-center sm:h-[calc(100vh-100px-6rem)] w-full ">
 						<div className="flex flex-col space-y-6">
+							<span className="relative uppercase text-accent-foreground -mb-4">Wir sind ein KI-Agentic Produkt Studio</span>
 							<div>{title}</div>
 							<p className="text-xl text-muted-foreground  max-w-[600px]">{description}</p>
 							<div className="pt-4">
@@ -59,7 +59,7 @@ export default function Hero() {
 
 			<section className="section-with-lines py-10">
 				<div className="mx-auto text-center">
-					<h3 className="mb-10">{supportedBy}</h3>
+					<h3 className="mb-10 text-muted-foreground">{supportedBy}</h3>
 					<div className="flex flex-wrap justify-center items-center gap-12 md:gap-20 px-4">
 						<Image src="/unternehmertum.svg" alt="Unternehmertum" height={0} width={90} className="object-contain" />
 						<Image src="/manage-and-more.svg" alt="Manage and More" height={0} width={240} className="object-contain" />
