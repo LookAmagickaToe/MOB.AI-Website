@@ -24,10 +24,10 @@ export default function CareersPage() {
 							info@isarai.de
 						</a>
 					</p>
-					<p className="text-muted-foreground md:text-lg text-sm mb-4 md:text-center text-justify">
+					{/* <p className="text-muted-foreground md:text-lg text-sm mb-4 md:text-center text-justify">
 						Die aktuellen Teammitglieder verfügen über Hintergründe in Informatik, Wirtschaft und Statistik. Wir haben Medaillen im Judo gewonnen. Auch außerhalb der Arbeit
 						erbringen unsere Kolleginnen und Kollegen Spitzenleistungen – etwa im Judo oder im Schach.
-					</p>
+					</p> */}
 				</section>
 			</main>
 		</>
