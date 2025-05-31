@@ -2,8 +2,6 @@
 import { Button } from "@/components/ui/button";
 import Image from "next/image";
 import { useLanguage } from "@/providers/language";
-import CookieConsent from "react-cookie-consent";
-import Link from "next/link";
 import { Marquee } from "../magicui/marquee";
 import { ArrowRight } from "lucide-react";
 
@@ -66,7 +64,7 @@ export default function Hero() {
 								<Image src="/groupimage.png" alt="Founder Team" fill className="object-cover rounded-sm image-render-pixel" priority />
 							</div> */}
 							<div className="relative w-full aspect-video rounded overflow-hidden ">
-								<Image src="/groupimage.png" alt="Founder Team" fill className="object-cover rounded-lg" priority />
+								<Image src="/groupimage2.jpg" alt="Founder Team" fill className="object-cover rounded-lg" priority />
 							</div>
 						</div>
 					</div>
