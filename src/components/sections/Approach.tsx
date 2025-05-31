@@ -44,7 +44,7 @@ export default function OurApproach() {
 			}
 			subheading={null}
 		>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t bg-muted/10 gap-4 p-4">
+			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t bg-muted/20 gap-4 p-4">
 				{benefits.map((benefit, index) => (
 					<div key={index} className="p-8 rounded border border-dotted bg-card flex flex-col items-center justify-start gap-2">
 						<div className="mb-4">{benefit.icon}</div>

@@ -1,7 +1,7 @@
 "use client";
 
 import { Card, CardContent } from "@/components/ui/card";
-import { BarChartIcon as ChartBar, TrendingUp, AlertCircle } from "lucide-react";
+import { BarChartIcon as ChartBar, TrendingUp, AlertCircle, ArrowUpRight } from "lucide-react";
 import { useLanguage } from "@/providers/language";
 import SectionWithLeftHeading from "../section-with-left-heading";
 import Link from "next/link";
@@ -29,14 +29,17 @@ export default function ProblemStatement() {
 	];
 
 	const rightSide = (
-		<div className="h-full p-4 gap-4 grid grid-rows-2 bg-muted/10 border-t lg:border-none ">
+		<div className="h-full p-4 gap-4 grid grid-rows-2 bg-muted/20 border-t lg:border-l">
 			{stats.map((stat, index) => (
-				<Card key={index} className="h-full w-full flex items-center justify-center border-dashed relative py-4">
-					<CardContent className="flex items-center justify-center flex-col text-muted-foreground gap-4  sm:py-0">
-						<h1 className="text-accent-foreground">{stat.eyecatcher}</h1>
-						<span className="text-sm sm:text-xl text-muted-foreground text-center">{language === "en" ? stat.value : stat.valuegerman}</span>
+				<Card key={index} className="h-full w-full flex items-center justify-center relative py-8">
+					<CardContent className="flex items-center justify-center flex-col text-muted-foreground gap-4 sm:py-0 sm:px-10">
+						<h1 className="text-accent-foreground">+ {stat.eyecatcher}</h1>
+						<span className="text-sm sm:max-w-sm pb-4 text-muted-foreground text-center">{language === "en" ? stat.value : stat.valuegerman}</span>
 						<Link key={index} href={stat.link} target="_blank" rel="noopener noreferrer" className="absolute bottom-2 right-2">
-							<span className="text-xs sm:text-sm text-muted-foreground/50 ">{stat.source}</span>
+							<span className="text-xs text-muted-foreground/50 flex items-center gap-1">
+								{stat.source}
+								<ArrowUpRight className="size-4" />
+							</span>
 						</Link>
 					</CardContent>
 				</Card>
@@ -64,9 +67,12 @@ export default function ProblemStatement() {
 		de: {
 			title: <>Der Kostenvorteil durch KI ist jetzt zu groß, um ignoriert zu werden.</>,
 			description: [
-				<>Der Mittelstand steht vor einer entscheidenden Herausforderung:</>,
-				<>Wie Studien und Umfragen belegen, ist KI nicht mehr optimal, sondern überlebenswichtig.</>,
-				<>KI-Agenten revolutionieren schon heute Arbeitsprozesse in Unternehmen, indem Sie Mitarbeiter nicht ersetzen, sondern um ein vielfaches produktiver machen.</>,
+				// <>Der Mittelstand steht vor einer entscheidenden Herausforderung:</>,
+				// <>Wie Studien und Umfragen belegen, ist KI nicht mehr optimal, sondern überlebenswichtig.</>,
+				<>
+					<mark>KI</mark> nicht mehr optimal, sondern <mark>überlebenswichtig</mark>. <mark>KI-Agenten</mark> revolutionieren schon heute Arbeitsprozesse in Unternehmen, indem Sie
+					Mitarbeiter nicht ersetzen, <mark>sondern um ein vielfaches produktiver machen</mark>.
+				</>,
 			],
 			buttonText: "Mehr erfahren",
 			supportedBy: "Unterstützt von",
@@ -76,12 +82,14 @@ export default function ProblemStatement() {
 	const { title, description, buttonText, supportedBy } = text[language];
 
 	return (
-		<SectionWithLeftHeading heading={title} subheading={""} rightSide={rightSide}>
-			<div className="space-y-6 text-muted-foreground">
-				{description.map((paragraph, index) => (
-					<Text key={index}>{paragraph}</Text>
-				))}
-			</div>
-		</SectionWithLeftHeading>
+		<div id="content">
+			<SectionWithLeftHeading heading={title} subheading={"KI IST KEIN HYPE"} rightSide={rightSide}>
+				<div className="text-muted-foreground ">
+					{description.map((paragraph, index) => (
+						<Text key={index}>{paragraph}</Text>
+					))}
+				</div>
+			</SectionWithLeftHeading>
+		</div>
 	);
 }

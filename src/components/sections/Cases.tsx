@@ -79,11 +79,11 @@ export default function UseCases() {
 
 				<div
 					ref={scrollContainerRef}
-					className="flex overflow-x-auto space-x-4 py-4 -mx-4 px-8 bg-muted/10  border-t scrollbar-hide no-scrollbar"
+					className="flex overflow-x-auto space-x-4 py-4 -mx-4 px-8 bg-muted/20  border-t scrollbar-hide no-scrollbar"
 					style={{ scrollbarWidth: "none", msOverflowStyle: "none" }}
 				>
 					{useCases.map((useCase, index) => (
-						<Card key={index} className="flex-shrink-0 w-[300px] md:w-[400px] bg-card border border-dashed p-4 justify-start flex flex-col">
+						<Card key={index} className="shrink-0 w-[300px] md:w-[400px] bg-card border p-4 justify-start flex flex-col">
 							<div className="relative mx-auto text-muted-foreground">{useCase.image}</div>
 							<CardContent className="p-6">
 								<h3>{language === "en" ? useCase.title : useCase.titleGerman}</h3>

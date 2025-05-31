@@ -1,5 +1,6 @@
 "use client";
 
+import { Button } from "@/components/ui/button";
 import Link from "next/link";
 
 export default function ImpressumPage() {
@@ -7,18 +8,18 @@ export default function ImpressumPage() {
 
 	return (
 		<>
-			<header className="w-full py-4 px-6 border-b border-blue-900/20 bg-background">
-				<div className="max-w-3xl mx-auto">
-					<Link href="/" className="text-sm text-blue-400 hover:underline">
-						← {isGerman ? "Zurück zur Startseite" : "Back to Homepage"}
-					</Link>
+			<header className="w-full py-4 px-4 border-b border-muted">
+				<div className="max-w-6xl mx-auto">
+					<Button variant="link" className="uppercase" asChild>
+						<Link href="/">← Zurück zur Startseite</Link>
+					</Button>
 				</div>
 			</header>
 
-			<main className="max-w-3xl mx-auto py-16 px-6">
-				<h1>{isGerman ? "Impressum" : "Legal Notice"}</h1>
+			<main className="md:max-w-2xl mx-auto md:py-16 md:px-6 p-6">
+				<h1 className="text-center mb-2">Impressum</h1>
 
-				<section className="mb-8">
+				<section className="text-muted-foreground md:text-base text-sm mb-4 text-left">
 					<h2 className=" mb-2">{isGerman ? "Angaben gemäß § 5 TMG" : "Information according to § 5 TMG"}</h2>
 					<p>
 						Maxime Christian
@@ -30,7 +31,7 @@ export default function ImpressumPage() {
 					</p>
 				</section>
 
-				<section className="mb-8">
+				<section className="text-muted-foreground md:text-base text-sm mb-4 text-left">
 					<h2 className=" mb-2">{isGerman ? "Kontakt" : "Contact"}</h2>
 					<p>
 						{isGerman ? "Telefon" : "Phone"}: +49 174 6247815
@@ -39,7 +40,7 @@ export default function ImpressumPage() {
 					</p>
 				</section>
 
-				<section className="mb-8">
+				<section className="text-muted-foreground md:text-base text-sm mb-4 text-left">
 					<h2 className=" mb-2">{isGerman ? "Verantwortlich für den Inhalt nach § 55 Abs. 2 RStV" : "Responsible for content according to § 55 Abs. 2 RStV"}</h2>
 					<p>
 						Maxime Christian
@@ -49,7 +50,7 @@ export default function ImpressumPage() {
 					</p>
 				</section>
 
-				<section>
+				<section className="text-muted-foreground md:text-base text-sm mb-4 text-left">
 					<h2 className=" mb-2">{isGerman ? "Haftungsausschluss" : "Disclaimer"}</h2>
 					<p className="mb-4">
 						{isGerman
@@ -62,7 +63,7 @@ export default function ImpressumPage() {
 							: "This website is for informational purposes only. The content has been created with the utmost care, but we assume no responsibility for the accuracy, completeness, or timeliness of the information."}
 					</p>
 				</section>
-				<section id="datenschutz" className="mt-12">
+				<section id="datenschutz" className="text-muted-foreground md:text-base text-sm mb-4 text-left mt-12">
 					<h2 className=" mb-2">{isGerman ? "Datenschutzerklärung" : "Privacy Policy"}</h2>
 					<p className="mb-4">
 						{isGerman
