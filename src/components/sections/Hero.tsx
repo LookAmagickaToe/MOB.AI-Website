@@ -62,7 +62,7 @@ export default function Hero() {
 
 						<div className="rounded overflow-hidden border sm:p-6 bg-dashes-grid">
 							<div className="relative h-[400px] lg:h-[600px] rounded overflow-hidden ">
-								<Image src="/groupimage.jpg" alt="Founder Team" fill className="object-cover rounded-sm image-render-pixel" priority />
+								<Image src="/groupimage.png" alt="Founder Team" fill className="object-cover rounded-sm image-render-pixel" priority />
 							</div>
 						</div>
 					</div>

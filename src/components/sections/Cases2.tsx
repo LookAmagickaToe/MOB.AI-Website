@@ -6,6 +6,7 @@ import { Card, CardContent } from "@/components/ui/card";
 import { useLanguage } from "@/providers/language";
 import { Marquee } from "@/components/magicui/marquee";
 import { Button } from "../ui/button";
+import { SpinningText } from "../magicui/spinning-text";
 
 const mcps = [
 	{
@@ -53,25 +54,15 @@ const CENTER_X = 35;
 const CENTER_Y = 35;
 const RADIUS = 22;
 
-const CaseCard = ({ title, description, icon }: { title: string; description: ReactNode; icon: string }) => {
+const CaseCard = ({ title, description, icon, reverse }: { title: string; description: ReactNode; icon: string; reverse: boolean }) => {
 	return (
 		<Card key={title} className="shrink-0 w-[300px] md:w-[400px] bg-card border p-6 justify-start flex flex-col">
 			<div className="flex flex-row items-center gap-4">
 				{/* <div className="flex items-center justify-center rounded-full size-14 bg-sky-300/10 border-2 border-sky-500 max-h-14 max-w-14 min-h-14 min-w-14">{icon}</div> */}
-				<div className="flex items-center justify-center rounded-full size-14 bg-sky-300/10 border-2 border-sky-500 max-h-14 max-w-14 min-h-14 min-w-14">
-					<svg className="w-14 h-14 p-1" viewBox="0 0 70 70">
-						<defs>
-							<path
-								id="circlePath"
-								d={`M ${CENTER_X - RADIUS},${CENTER_Y}, 
-								a ${RADIUS}, ${RADIUS} 0 1, 1 ${2 * RADIUS}, 0 
-								${RADIUS}, ${RADIUS} 0 1,1 ${-2 * RADIUS},0`}
-							/>
-						</defs>
-						<text className="fill-sky-500 font-mono tracking-wider uppercase" textLength={Math.floor(Math.PI * 2 * RADIUS)}>
-							<textPath href="#circlePath">{icon}</textPath>
-						</text>
-					</svg>
+				<div className="flex items-center justify-center rounded-full size-14 bg-sky-300/10 border-2 border-sky-500 max-h-14 max-w-14 min-h-14 min-w-14 relative">
+					<SpinningText className="text-xs absolute inset-0 text-sky-500 font-bold" duration={5} radius={2.5} reverse={reverse}>
+						{icon}
+					</SpinningText>
 				</div>
 				<h4>{title}</h4>
 			</div>
@@ -97,12 +88,12 @@ export default function UseCases() {
 				<div className="relative flex w-full flex-col items-center justify-center overflow-hidden my-10">
 					<Marquee pauseOnHover className="[--duration:20s]" reverse>
 						{agents.map((e) => (
-							<CaseCard key={e.title} {...e} icon={"AGENT • AGENT •"} />
+							<CaseCard key={e.title} {...e} icon={"AGENT • AGENT •"} reverse={false} />
 						))}
 					</Marquee>
 					<Marquee pauseOnHover className="[--duration:20s]">
 						{mcps.map((e) => (
-							<CaseCard key={e.title} {...e} icon={"MCP • MCP • MCP •"} />
+							<CaseCard key={e.title} {...e} icon={"MCP • MCP • MCP •"} reverse={true} />
 						))}
 					</Marquee>
 
