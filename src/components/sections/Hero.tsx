@@ -23,6 +23,7 @@ export default function Hero() {
 		}
 	};
 
+	// Change the background to a office location (outside of the building, it should be a light background). Change as well our outfits to business casual (everyone should wear very casually a shirt - very imporant: two buttons should be open on each shirt).
 	// Object to store text based on language
 	const text = {
 		en: {
@@ -32,7 +33,7 @@ export default function Hero() {
 			supportedBy: "Supported by",
 		},
 		de: {
-			title: <h1 className="text-4xl sm:text-7xl break-words whitespace-pre-wrap">Machen Sie KI-Agenten zu Ihrem Wettbwerbsvorteil</h1>,
+			title: <h1 className="text-4xl sm:text-7xl break-words whitespace-pre-wrap">Machen Sie KI-Agenten zu &shy;Ihrem Wett&shy;be&shy;werbs&shy;vor&shy;teil</h1>,
 			description: "Wir implementieren neueste KI-Technologie direkt von der Uni in Ihren Geschäftsabläufen und steigern so drastisch Ihre Effizienz.",
 			buttonText: "Kontakt aufnehmen",
 			supportedBy: "Unterstützt von",
@@ -42,15 +43,15 @@ export default function Hero() {
 
 	return (
 		<>
-			<section className="w-full sm:h-[calc(100vh)] bg-muted/20 p-4 sm:p-6">
-				<div className="p-4 sm:p-6 mx-auto border rounded bg-card">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-12 items-start sm:items-center sm:h-[calc(100vh-100px-0rem)] w-full ">
-						<div className="flex flex-col space-y-6">
-							<span className="sm:text-lg text-xs relative uppercase text-accent-foreground -mb-0">Wir sind ein KI-Agentic Produkt Studio</span>
+			<section className="w-full sm:h-[calc(100vh)] bg-muted/20 p-2 md:p-6">
+				<div className="p-2 sm:p-6 mx-auto border rounded bg-card">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start lg:items-center sm:h-[calc(100vh-100px-0rem)] w-full ">
+						<div className="flex flex-col space-y-2 md:space-y-6 ">
+							<span className="sm:text-lg text-[0.5rem] relative uppercase text-accent-foreground -mb-0 text">Wir sind ein KI-Agentic Produkt Studio</span>
 							<div>{title}</div>
-							<p className="text-sm sm:text-xl text-muted-foreground max-w-[600px]">{description}</p>
-							<div className="pt-4 flex items-center gap-4">
-								<Button onClick={scrollToContact} className="uppercase">
+							<p className="text-xs sm:text-xl text-muted-foreground max-w-[600px]">{description}</p>
+							<div className="pt-2 md:pt-4 flex items-center gap-4">
+								<Button onClick={scrollToContact} className="uppercase w-full md:w-auto">
 									{buttonText}
 									<ArrowRight className="size-4" />
 								</Button>
@@ -60,9 +61,12 @@ export default function Hero() {
 							</div>
 						</div>
 
-						<div className="rounded overflow-hidden border sm:p-6 bg-dashes-grid">
-							<div className="relative h-[400px] lg:h-[600px] rounded overflow-hidden ">
+						<div className="rounded overflow-hidden border p-2 sm:p-6 bg-dashes-grid">
+							{/* <div className="relative h-[400px] lg:h-[600px] rounded overflow-hidden ">
 								<Image src="/groupimage.png" alt="Founder Team" fill className="object-cover rounded-sm image-render-pixel" priority />
+							</div> */}
+							<div className="relative w-full aspect-video rounded overflow-hidden ">
+								<Image src="/groupimage.png" alt="Founder Team" fill className="object-cover rounded-lg" priority />
 							</div>
 						</div>
 					</div>

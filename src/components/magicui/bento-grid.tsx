@@ -31,7 +31,7 @@ const BentoCard = ({ name, className, background, Icon, description, href, cta, 
 	<div
 		key={name}
 		className={cn(
-			"group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
+			"group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-lg md:rounded-xl",
 			"border bg-card p-6 hover:border-sky-500",
 			// light styles
 			// "bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
@@ -44,7 +44,7 @@ const BentoCard = ({ name, className, background, Icon, description, href, cta, 
 		<div>{background}</div>
 		<div className="pointer-events-none z-10 flex transform-gpu flex-col justify-start h-full gap-1">
 			<h3 className="mt-2">{name}</h3>
-			<p className="max-w-lg text-muted-foreground">{description}</p>
+			<p className="max-w-lg text-muted-foreground text-xs md:text-base">{description}</p>
 		</div>
 
 		<div className="absolute sm:-right-14 sm:-bottom-14 -right-7 -bottom-7">

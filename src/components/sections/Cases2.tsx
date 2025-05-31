@@ -56,10 +56,10 @@ const RADIUS = 22;
 
 const CaseCard = ({ title, description, icon, reverse }: { title: string; description: ReactNode; icon: string; reverse: boolean }) => {
 	return (
-		<Card key={title} className="shrink-0 w-[300px] md:w-[400px] bg-card border p-6 justify-start flex flex-col">
+		<Card key={title} className="shrink-0 w-[300px] md:w-[400px] bg-card border p-4 md:p-6 justify-start flex flex-col">
 			<div className="flex flex-row items-center gap-4">
 				{/* <div className="flex items-center justify-center rounded-full size-14 bg-sky-300/10 border-2 border-sky-500 max-h-14 max-w-14 min-h-14 min-w-14">{icon}</div> */}
-				<div className="flex items-center justify-center rounded-full size-14 bg-sky-300/10 border-2 border-sky-500 max-h-14 max-w-14 min-h-14 min-w-14 relative">
+				<div className="flex items-center justify-center rounded-full size-14 bg-sky-300/10 border-2 border-sky-500  relative">
 					<SpinningText className="text-xs absolute inset-0 text-sky-500 font-bold" duration={5} radius={2.5} reverse={reverse}>
 						{icon}
 					</SpinningText>
@@ -68,7 +68,7 @@ const CaseCard = ({ title, description, icon, reverse }: { title: string; descri
 			</div>
 
 			<CardContent className="p-2 mt-2">
-				<p className="text-muted-foreground">{description}</p>
+				<p className="text-muted-foreground text-xs md:text-base">{description}</p>
 			</CardContent>
 		</Card>
 	);
