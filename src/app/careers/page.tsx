@@ -24,10 +24,15 @@ export default function CareersPage() {
 							info@isarai.de
 						</a>
 					</p>
-					{/* <p className="text-muted-foreground md:text-lg text-sm mb-4 md:text-center text-justify">
-						Die aktuellen Teammitglieder verfügen über Hintergründe in Informatik, Wirtschaft und Statistik. Wir haben Medaillen im Judo gewonnen. Auch außerhalb der Arbeit
-						erbringen unsere Kolleginnen und Kollegen Spitzenleistungen – etwa im Judo oder im Schach.
-					</p> */}
+					<p className="text-muted-foreground md:text-lg text-sm mb-4 md:text-center text-justify">
+						Wir bringen fundierte Kenntnisse aus Informatik, Wirtschaft und Statistik mit. Wir liefern zuverlässig ab, geben stets Vollgas und fordern uns gegenseitig heraus –
+						genauso wie wir uns gegenseitig unterstützen und fördern. Wir glauben an das, was wir tun, und stehen zu unserem Wort. Fehler nehmen wir offen an und lernen
+						kontinuierlich daraus. Gleichzeitig genießen wir die Freiheit, echten Mehrwert zu schaffen, und übernehmen die Verantwortung, dies richtig umzusetzen. Auch
+						außerhalb der Arbeit streben wir nach Spitzenleistungen: sei es im Judo, im Fitnessstudio oder auf der Couch beim Fußballschauen.
+					</p>
+					<p className="text-muted-foreground md:text-lg text-sm mb-4 md:text-center text-justify">
+						Werde Teil eines Teams, das mit großer Leidenschaft an unserer gemeinsamen Vision arbeitet.
+					</p>
 				</section>
 			</main>
 		</>

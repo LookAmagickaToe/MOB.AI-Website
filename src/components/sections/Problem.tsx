@@ -11,6 +11,7 @@ export default function ProblemStatement() {
 	const { language } = useLanguage();
 	const stats = [
 		{
+			eyecatcherprefix: "+",
 			eyecatcher: "40%",
 			valuegerman: "Effizienzsteigerung von Mitarbeitern, die KI richtig einsetzen",
 			value: "Efficiency Boost for Highly Skilled Workers applying AI",
@@ -19,6 +20,7 @@ export default function ProblemStatement() {
 			link: "https://mitsloan.mit.edu/ideas-made-to-matter/how-generative-ai-can-boost-highly-skilled-workers-productivity",
 		},
 		{
+			eyecatcherprefix: "!",
 			eyecatcher: "70%",
 			valuegerman: "der KMUs zitieren Mangel an Know-How als größte Hürde",
 			value: "of SMEs cite Know-How as biggest Hurdle",
@@ -33,7 +35,9 @@ export default function ProblemStatement() {
 			{stats.map((stat, index) => (
 				<Card key={index} className="h-full w-full flex items-center justify-center relative py-8">
 					<CardContent className="flex items-center justify-center flex-col text-muted-foreground gap-4 sm:py-0 sm:px-10">
-						<h1 className="text-accent-foreground">+ {stat.eyecatcher}</h1>
+						<h1 className="text-accent-foreground">
+							{stat.eyecatcherprefix} {stat.eyecatcher}
+						</h1>
 						<span className="text-sm sm:max-w-sm pb-4 text-muted-foreground text-center">{language === "en" ? stat.value : stat.valuegerman}</span>
 						<Link key={index} href={stat.link} target="_blank" rel="noopener noreferrer" className="absolute bottom-2 right-2">
 							<span className="text-xs text-muted-foreground/50 flex items-center gap-1">
