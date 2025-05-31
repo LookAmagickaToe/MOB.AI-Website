@@ -14,14 +14,14 @@ export default function Mission() {
 			descriptiongerman: " Anders als übliche starre Softwarelösungen lassen sich AI Agents problemlos in Ihre bestehenden Systeme und Abläufe integrieren.",
 			title: "Seamless Integration",
 			description: "Unlike traditional rigid software solutions, AI agents can be effortlessly integrated into your existing systems and workflows.",
-			icon: <PlugZap className="size-14 flex-shrink-0 mt-1 text-accent-foreground" strokeWidth={1} />,
+			icon: <PlugZap className="size-14 shrink-0 mt-1 text-accent-foreground" strokeWidth={1} />,
 		},
 		{
 			titlegerman: "Branchenspezifische Anpassung",
 			descriptiongerman: "Unsere AI Agents können für Ihre spezifischen Branchenanforderungen angepasst werden.",
 			title: "Industry-Specific Customization",
 			description: "Our AI agents can be tailored to meet the specific needs and requirements of your industry.",
-			icon: <Sliders className="size-14 flex-shrink-0 mt-1 text-accent-foreground" strokeWidth={1} />,
+			icon: <Sliders className="size-14 shrink-0 mt-1 text-accent-foreground" strokeWidth={1} />,
 		},
 		{
 			titlegerman: "DSGVO-konform und sicher",
@@ -30,7 +30,7 @@ export default function Mission() {
 			title: "GDPR-Compliant and Secure",
 			description:
 				"We place the highest priority on data protection, enabling you to harness the benefits of artificial intelligence without compromising your customers' privacy or the security of your data.",
-			icon: <ShieldCheck className="size-14 flex-shrink-0 mt-1 text-accent-foreground" strokeWidth={1} />,
+			icon: <ShieldCheck className="size-14 shrink-0 mt-1 text-accent-foreground" strokeWidth={1} />,
 		},
 	];
 
@@ -58,7 +58,7 @@ export default function Mission() {
 					</div>
 					<div className="space-y-4">
 						{valuePoints.map((point, index) => (
-							<Card key={index} className="h-full w-full border-dashed p-4 overflow-hidden">
+							<Card key={index} className="h-full w-full p-4 overflow-hidden">
 								<CardContent className="flex sm:flex-row flex-col items-start gap-4">
 									{point.icon}
 									<div>

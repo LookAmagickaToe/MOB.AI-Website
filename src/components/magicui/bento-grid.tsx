@@ -32,7 +32,7 @@ const BentoCard = ({ name, className, background, Icon, description, href, cta, 
 		key={name}
 		className={cn(
 			"group relative col-span-3 flex flex-col justify-between overflow-hidden rounded-xl",
-			"border border-dashed bg-card p-6 hover:border-sky-500",
+			"border bg-card p-6 hover:border-sky-500",
 			// light styles
 			// "bg-background [box-shadow:0_0_0_1px_rgba(0,0,0,.03),0_2px_4px_rgba(0,0,0,.05),0_12px_24px_rgba(0,0,0,.05)]",
 			// dark styles
@@ -47,9 +47,9 @@ const BentoCard = ({ name, className, background, Icon, description, href, cta, 
 			<p className="max-w-lg text-muted-foreground">{description}</p>
 		</div>
 
-		<div className="absolute -right-14 -bottom-14">
-			<div className="size-80 transition-all duration-300 group-hover:scale-110 rounded-full bg-sky-500/5 flex items-center justify-center">
-				<Icon className="size-44 text-sky-500" strokeWidth={1} />
+		<div className="absolute sm:-right-14 sm:-bottom-14 -right-7 -bottom-7">
+			<div className="size-40 sm:size-80 transition-all duration-300 group-hover:scale-110 rounded-full bg-sky-500/5 flex items-center justify-center">
+				<Icon className="size-20 sm:size-44 text-sky-500" strokeWidth={1} />
 			</div>
 		</div>
 

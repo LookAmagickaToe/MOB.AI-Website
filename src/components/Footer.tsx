@@ -2,7 +2,7 @@ import Link from "next/link";
 
 export default function Footer() {
 	return (
-		<footer className="w-full border-t border-dashed bg-background">
+		<footer className="w-full border-t  bg-background">
 			<div className="mx-auto px-0 md:px-6 py-5">
 				<div className="mt-0 flex flex-col md:flex-row justify-between items-center">
 					<p className="text-xs ">{new Date().getFullYear()} ISAR AI. All rights reserved.</p>
@@ -10,7 +10,7 @@ export default function Footer() {
 						<Link href="/impressum#datenschutz" className="text-xs transition-colors">
 							Privacy Policy
 						</Link>
-						<Link href="/impressum" className="text-xs transition-colors">
+						<Link href="/imprint" className="text-xs transition-colors">
 							Impressum
 						</Link>
 					</div>

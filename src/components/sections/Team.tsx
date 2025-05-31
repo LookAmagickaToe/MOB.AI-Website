@@ -40,43 +40,45 @@ export default function Team() {
 	];
 
 	return (
-		<SectionWithMiddleHeading small preheading={null} heading={language === "en" ? "Meet the Team" : "Das Team"} subheading={null}>
-			<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t bg-muted/10 gap-4 p-4">
-				{founders.map((founder, index) => (
-					<div key={index} className="flex flex-col bg-card overflow-hidden border border-dashed rounded-lg mx-auto w-full ">
-						<div className="relative h-80 w-auto m-4 rounded overflow-hidden">
-							<Image src={founder.image || "/placeholder.svg"} alt={founder.name} fill className="object-cover object-top" />
-						</div>
-						<div className="p-6 flex flex-col flex-grow">
-							<div className="flex flex-col items-center justify-between mb-1">
-								<h3>{founder.name}</h3>
-								<div className="flex items-center gap-3 mt-auto pt-2">
-									{founder.logos?.map((logo, index) => (
-										<div key={index} className="h-6 w-auto">
-											<Image
-												src={logo}
-												alt="Affiliation logo"
-												className="h-full w-auto object-contain"
-												width={0} // required to avoid layout shift in Next.js 13+
-												height={0}
-												sizes="32px"
-											/>
-										</div>
-									))}
-								</div>
+		<div id="team">
+			<SectionWithMiddleHeading small preheading={null} heading={language === "en" ? "Meet the Team" : "Das Team"} subheading={null}>
+				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 border-t bg-muted/20 gap-4 p-4">
+					{founders.map((founder, index) => (
+						<div key={index} className="flex flex-col bg-card overflow-hidden border rounded-lg mx-auto w-full ">
+							<div className="relative h-80 w-auto m-4 rounded overflow-hidden">
+								<Image src={founder.image || "/placeholder.svg"} alt={founder.name} fill className="object-cover object-top" />
 							</div>
-							<p className="my-5 flex-grow text-muted-foreground">{language === "en" ? founder.bio : founder.biogerman}</p>
+							<div className="p-6 flex flex-col grow">
+								<div className="flex flex-col items-center justify-between mb-1">
+									<h3>{founder.name}</h3>
+									<div className="flex items-center gap-3 mt-auto pt-2">
+										{founder.logos?.map((logo, index) => (
+											<div key={index} className="h-6 w-auto">
+												<Image
+													src={logo}
+													alt="Affiliation logo"
+													className="h-full w-auto object-contain"
+													width={0} // required to avoid layout shift in Next.js 13+
+													height={0}
+													sizes="32px"
+												/>
+											</div>
+										))}
+									</div>
+								</div>
+								<p className="my-5 grow text-muted-foreground">{language === "en" ? founder.bio : founder.biogerman}</p>
 
-							<Button variant="ghost" className="w-full" asChild>
-								<Link href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="w-full">
-									Linkedin
-									<ArrowUpRight className="size-4" />
-								</Link>
-							</Button>
+								<Button variant="ghost" className="w-full" asChild>
+									<Link href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="w-full">
+										Linkedin
+										<ArrowUpRight className="size-4" />
+									</Link>
+								</Button>
+							</div>
 						</div>
-					</div>
-				))}
-			</div>
-		</SectionWithMiddleHeading>
+					))}
+				</div>
+			</SectionWithMiddleHeading>
+		</div>
 	);
 }

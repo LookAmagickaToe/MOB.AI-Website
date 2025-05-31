@@ -42,13 +42,26 @@ export default function Contact() {
 				small
 				preheading={null}
 				heading={language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}
-				subheading={language === "en" ? "Schedule your free 30-minute intro call – no strings attached." : "Buchen Sie ein unverbindliches 30-minütiges Erstgespräch"}
+				subheading={
+					language === "en" ? "Schedule your free 30-minute intro call – no strings attached." : "Schreiben Sie uns oder buchen Sie ein unverbindliches 30-minütiges Erstgespräch"
+				}
 			>
+				<div className="mx-auto text-center border-y p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10">
+					<span className="text-accent-foreground flex gap-2 items-center">
+						<Mail className="size-4" />
+						info@isarai.de
+					</span>
+
+					<span className="text-accent-foreground flex gap-2 items-center">
+						<Phone className="size-4" />
+						+49 174 624 78 15
+					</span>
+				</div>
 				<div className="grid grid-cols-1 lg:grid-cols-1 gap-12 p-8">
 					{/* <div>
 					<h3 className="mb-9 ">{language === "en" ? "Contact Information" : "Kontaktinformation"}</h3>
 					<div className="space-y-4">
-						<Card className="bg-card border border-dashed  ">
+						<Card className="bg-card border  ">
 							<CardContent className="p-6 flex items-start space-x-4">
 								<Mail className="h-6 w-6  mt-1" />
 								<div>
@@ -58,7 +71,7 @@ export default function Contact() {
 							</CardContent>
 						</Card>
 
-						<Card className="bg-card border border-dashed  ">
+						<Card className="bg-card border ">
 							<CardContent className="p-6 flex items-start space-x-4">
 								<Phone className="h-6 w-6 mt-1" />
 								<div>
@@ -70,7 +83,7 @@ export default function Contact() {
 
 						<Card
 							onClick={() => window.open("https://www.google.com/maps/search/?api=1&query=Lichtenbergstraße+6,+85748+Garching+bei+München", "_blank")}
-							className="bg-card border border-dashed  "
+							className="bg-card border "
 						>
 							<CardContent className="p-4 flex items-start space-x-4">
 								<MapPin className="h-6 w-6  mt-1" />

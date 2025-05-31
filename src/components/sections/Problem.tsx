@@ -29,11 +29,11 @@ export default function ProblemStatement() {
 	];
 
 	const rightSide = (
-		<div className="h-full p-4 gap-4 grid grid-rows-2 bg-muted/10 border-t lg:border-none ">
+		<div className="h-full p-4 gap-4 grid grid-rows-2 bg-muted/20 border-t lg:border-l">
 			{stats.map((stat, index) => (
-				<Card key={index} className="h-full w-full flex items-center justify-center border-dashed relative py-4">
+				<Card key={index} className="h-full w-full flex items-center justify-center relative py-8">
 					<CardContent className="flex items-center justify-center flex-col text-muted-foreground gap-4 sm:py-0 sm:px-10">
-						<h1 className="text-accent-foreground">{stat.eyecatcher}</h1>
+						<h1 className="text-accent-foreground">+ {stat.eyecatcher}</h1>
 						<span className="text-sm sm:max-w-sm pb-4 text-muted-foreground text-center">{language === "en" ? stat.value : stat.valuegerman}</span>
 						<Link key={index} href={stat.link} target="_blank" rel="noopener noreferrer" className="absolute bottom-2 right-2">
 							<span className="text-xs text-muted-foreground/50 flex items-center gap-1">
@@ -82,12 +82,14 @@ export default function ProblemStatement() {
 	const { title, description, buttonText, supportedBy } = text[language];
 
 	return (
-		<SectionWithLeftHeading heading={title} subheading={"KI IST KEIN HYPE"} rightSide={rightSide}>
-			<div className="space-y-6 text-muted-foreground">
-				{description.map((paragraph, index) => (
-					<Text key={index}>{paragraph}</Text>
-				))}
-			</div>
-		</SectionWithLeftHeading>
+		<div id="content">
+			<SectionWithLeftHeading heading={title} subheading={"KI IST KEIN HYPE"} rightSide={rightSide}>
+				<div className="text-muted-foreground ">
+					{description.map((paragraph, index) => (
+						<Text key={index}>{paragraph}</Text>
+					))}
+				</div>
+			</SectionWithLeftHeading>
+		</div>
 	);
 }
