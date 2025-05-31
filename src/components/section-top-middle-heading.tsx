@@ -19,7 +19,7 @@ export default function SectionWithMiddleHeading({
 				<div className="max-w-3xl mx-auto text-center">
 					{preheading && (
 						<div className="mb-2">
-							<span className="relative uppercase text-accent-foreground">{preheading}</span>
+							<span className="relative uppercase text-accent-foreground sm:text-base text-xs">{preheading}</span>
 						</div>
 					)}
 					<h2 className="text-center">{heading}</h2>

@@ -76,7 +76,7 @@ export default function Header() {
 							{language === "en" ? "DE" : "EN"}
 						</Button> */}
 					</div>
-					<div className="items-center flex sm:hidden gap-2">
+					<div className="items-center flex sm:hidden gap-2 ">
 						<Button variant="default" onClick={scrollToContact} size={"sm"}>
 							KONTAKT
 							<ArrowRight className="size-4" />
@@ -86,7 +86,7 @@ export default function Header() {
 						</Button>
 					</div>
 					{isMenuOpen && (
-						<div className="absolute top-16 inset-x-0 bg-card border-b  border-muted w-full p-4 flex flex-col shadow-xl">
+						<div className="absolute top-16 inset-x-0 bg-card border-b  border-muted w-full p-4 flex flex-col ">
 							<Button variant="link" onClick={scrollToOffer}>
 								UNSER ANGEBOT
 							</Button>

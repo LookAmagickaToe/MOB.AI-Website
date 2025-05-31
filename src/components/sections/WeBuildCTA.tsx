@@ -15,15 +15,16 @@ export default function WeBuildCTA() {
 	};
 
 	return (
-		<section className="section-with-lines md:p-6 p-4 bg-muted/20">
+		<section className="section-with-lines md:p-6 p-2 bg-muted/20">
 			<div className="overflow-hidden p-2 sm:p-6 border rounded bg-card grid sm:grid-cols-2 items-center gap-2">
-				<div className="flex items-start justify-center gap-2 flex-col ">
+				<div className="flex items-center md:items-start justify-center gap-2 flex-col ">
 					{/* <span className="sm:text-lg text-xs relative uppercase text-muted-foreground -mb-0">Wir bauen</span> */}
+					<h2>Wir bauen Ihren</h2>
 					<div className="flex items-center gap-2 md:gap-4">
 						<div className=" bg-sky-500/10 border border-sky-500 rounded-lg overflow-hidden px-2 md:px-4 md:py-2 w-40 md:w-96">
 							<WordRotate className="text-2xl md:text-6xl text-sky-500" words={words} duration={1500} />
 						</div>
-						<h2>Agent</h2>
+						<h2>Agenten</h2>
 					</div>
 				</div>
 				<div className="md:block hidden ml-auto mr-12">
