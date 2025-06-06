@@ -31,9 +31,9 @@ export default function Hero() {
 			supportedBy: "Supported by",
 		},
 		de: {
-			title: <h1 className="text-4xl sm:text-7xl break-words whitespace-pre-wrap">Machen Sie KI-Agenten zu &shy;Ihrem Wett&shy;be&shy;werbs&shy;vor&shy;teil</h1>,
-			description: "Wir implementieren neueste KI-Technologie direkt von der Uni in Ihren Geschäftsabläufen und steigern so drastisch Ihre Effizienz.",
-			buttonText: "Kontakt aufnehmen",
+			title: <h1 className="text-4xl sm:text-7xl break-words whitespace-pre-wrap">Machen Sie KI Agenten zu Ihrem Wett&shy;be&shy;werbs&shy;vor&shy;teil</h1>,
+			description: "Wir machen Ihre Mitarbeitenden bis zu 40% effektiver durch die Konzeption und Entwicklung von nativen KI-Lösungen.",
+			buttonText: "Unser Angebot",
 			supportedBy: "Unterstützt von",
 		},
 	};
@@ -41,11 +41,11 @@ export default function Hero() {
 
 	return (
 		<>
-			<section className="w-full sm:h-[calc(100vh)] bg-muted/20 p-2 md:p-6">
+			<section className="w-full bg-muted/20 p-2 md:p-6">
 				<div className="p-2 sm:p-6 mx-auto border rounded bg-card">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start lg:items-center sm:h-[calc(100vh-100px-0rem)] w-full ">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start lg:items-center  w-full ">
 						<div className="flex flex-col space-y-2 md:space-y-6 ">
-							<span className="sm:text-lg text-[0.5rem] relative uppercase text-accent-foreground -mb-0 text">Wir sind ein KI-Agentic Produkt Studio</span>
+							<span className="sm:text-lg text-[0.725rem] relative uppercase text-accent-foreground mb-2 text">The AI Strategy & Solutions Lab</span>
 							<div>{title}</div>
 							<p className="text-xs sm:text-xl text-muted-foreground max-w-[600px]">{description}</p>
 							<div className="pt-2 md:pt-4 flex items-center gap-4">
@@ -53,9 +53,9 @@ export default function Hero() {
 									{buttonText}
 									<ArrowRight className="size-4" />
 								</Button>
-								<Button variant="secondary" onClick={scrollToContent} className="hidden sm:block uppercase">
+								{/* <Button variant="secondary" onClick={scrollToContent} className="hidden sm:block uppercase">
 									Mehr Erfahren
-								</Button>
+								</Button> */}
 							</div>
 						</div>
 
@@ -71,7 +71,7 @@ export default function Hero() {
 				</div>
 			</section>
 
-			<section className="section-with-lines py-10 flex flex-col items-center">
+			<section className="section-with-lines py-6 flex flex-col items-center">
 				<span className="relative uppercase text-accent-foreground -mb-0">Unterstützt von</span>
 				<div className="relative flex w-full max-w-2xl flex-col items-center justify-center overflow-hidden mt-10">
 					<Marquee pauseOnHover className="[--duration:20s] [--gap:5rem]">

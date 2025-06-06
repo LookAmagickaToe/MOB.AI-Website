@@ -88,12 +88,12 @@ export default function UseCases() {
 				<div className="relative flex w-full flex-col items-center justify-center overflow-hidden my-10">
 					<Marquee pauseOnHover className="[--duration:20s]" reverse>
 						{agents.map((e) => (
-							<CaseCard key={e.title} {...e} icon={"AGENT • AGENT •"} reverse={false} />
+							<CaseCard key={e.title} {...e} icon={"AGENT • AGENT •"} reverse={true} />
 						))}
 					</Marquee>
 					<Marquee pauseOnHover className="[--duration:20s]">
 						{mcps.map((e) => (
-							<CaseCard key={e.title} {...e} icon={"MCP • MCP • MCP •"} reverse={true} />
+							<CaseCard key={e.title} {...e} icon={"MCP • MCP • MCP •"} reverse={false} />
 						))}
 					</Marquee>
 

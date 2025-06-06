@@ -12,13 +12,13 @@ export default function ProblemStatement() {
 	const { language } = useLanguage();
 	const stats = [
 		{
-			positive: true,
-			eyecatcher: "40%",
-			valuegerman: "Effizienzsteigerung von Mitarbeitern, die KI richtig einsetzen",
-			value: "Efficiency Boost for Highly Skilled Workers applying AI",
-			icon: <TrendingUp className="size-12 text-muted" />,
-			source: "Harvard Business School, 2024",
-			link: "https://mitsloan.mit.edu/ideas-made-to-matter/how-generative-ai-can-boost-highly-skilled-workers-productivity",
+			positive: false,
+			eyecatcher: "70%",
+			valuegerman: "der KMUs zitieren Mangel an Know-How als größte Hürde",
+			value: "of SMEs cite Know-How as biggest Hurdle",
+			icon: <AlertCircle className="size-12 text-muted" />,
+			source: "Mittelstand Digital, 2023",
+			link: "https://www.mittelstand-digital.de/MD/Redaktion/DE/Publikationen/ki-Studie-2023.pdf?__blob=publicationFile&v=4",
 		},
 	];
 
@@ -59,13 +59,12 @@ export default function ProblemStatement() {
 			supportedBy: "Supported by",
 		},
 		de: {
-			title: <>Der Kostenvorteil durch KI ist jetzt zu groß, um ignoriert zu werden.</>,
+			title: <>Können Sie mithalten?</>,
 			description: [
-				// <>Der Mittelstand steht vor einer entscheidenden Herausforderung:</>,
-				// <>Wie Studien und Umfragen belegen, ist KI nicht mehr optimal, sondern überlebenswichtig.</>,
 				<>
-					<mark>KI</mark> ist nicht mehr optimal, sondern <mark>überlebenswichtig</mark>. <mark>KI-Agenten & -Workflows</mark> revolutionieren schon heute Arbeitsprozesse in
-					Unternehmen, indem sie Mitarbeiter nicht ersetzen, <mark>sondern um ein vielfaches produktiver machen</mark>.
+					Große Konzerne können es sich leisten, ganze Abteilungen von Machine-Learning Ingenieure einzustellen und realisieren erhebliche Effizienzpotentiale. Währenddessen werden
+					kleine und mittelständische Unternehmen durch die rasante Geschwindigkeit der <mark>KI-Fortschritte</mark> abgehängt.
+					<br />
 				</>,
 			],
 			buttonText: "Mehr erfahren",
@@ -77,7 +76,7 @@ export default function ProblemStatement() {
 
 	return (
 		<div id="content">
-			<SectionWithLeftHeading heading={title} subheading={"ABSEITS DES HYPES"} rightSide={side}>
+			<SectionWithLeftHeading heading={title} subheading={"DER RICHTIGE MOMENT IST JETZT"} leftSide={side}>
 				<div className="text-muted-foreground ">
 					{description.map((paragraph, index) => (
 						<Text key={index}>{paragraph}</Text>
