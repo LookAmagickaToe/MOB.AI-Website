@@ -1,20 +1,18 @@
 "use client";
 import Hero from "@/components/sections/Hero";
 import Problem from "@/components/sections/Problem";
+import Problem2 from "@/components/sections/Problem2";
 import Team from "@/components/sections/Team";
-import UseCases1 from "@/components/sections/Cases";
 import UseCases2 from "@/components/sections/Cases2";
 
 import Contact from "@/components/sections/Contact";
-import Approach1 from "@/components/sections/Approach";
 import { Approach } from "@/components/sections/Approach2";
-import Mission1 from "@/components/sections/Mission";
-import { Mission } from "@/components/sections/Mission3";
 import { LanguageProvider } from "@/providers/language";
 import WeBuildCTA from "@/components/sections/WeBuildCTA";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Mission2 from "@/components/sections/Mission2";
+import Offer from "@/components/sections/Offer";
 
 export default function Home() {
 	return (
@@ -25,17 +23,20 @@ export default function Home() {
 				<div className="bg-dashes-grid border-x"></div>
 				<div className="">
 					<Hero />
+					<WeBuildCTA />
+
 					<Problem />
-					{/* <Mission1 /> */}
+					<Problem2 />
+
 					<Mission2 />
-					{/* <Mission /> */}
-					{/* <UseCases1 /> */}
+
+					<Team />
+
+					<Offer />
 
 					<UseCases2 />
-					{/* <Approach1 /> */}
-					<Approach />
-					<WeBuildCTA />
-					<Team />
+
+					{/* <Approach /> */}
 
 					<Contact />
 				</div>

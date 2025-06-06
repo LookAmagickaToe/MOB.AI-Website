@@ -15,7 +15,7 @@ export default function SectionWithMiddleHeading({
 }) {
 	return (
 		<section className="section-with-lines">
-			<div className={cn("px-4 md:px-6 py-10 sm:py-20", { "py-10": small })}>
+			<div className={cn("px-4 md:px-6 py-6 sm:py-20 border-b", { "py-10": small })}>
 				<div className="max-w-3xl mx-auto text-center">
 					{preheading && (
 						<div className="mb-2">
@@ -26,9 +26,7 @@ export default function SectionWithMiddleHeading({
 					{subheading && <h4 className="mt-10 text-center text-muted-foreground">{subheading}</h4>}
 				</div>
 			</div>
-			<div className="px-0">
-				<div className="">{children}</div>
-			</div>
+			<div className="p-2 md:p-6 bg-muted/20">{children}</div>
 		</section>
 	);
 }
