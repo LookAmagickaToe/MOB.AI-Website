@@ -19,7 +19,7 @@ export default function SectionWithLeftHeading({
 					<div className="w-full text-center lg:text-left">
 						<div className="border-b border-muted p-6">
 							{subheading && (
-								<div className="mb-0">
+								<div className="mb-2">
 									<span className="relative uppercase text-accent-foreground text-xs sm:text-base">{subheading}</span>
 								</div>
 							)}

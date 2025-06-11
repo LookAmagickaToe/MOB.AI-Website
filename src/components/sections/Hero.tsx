@@ -43,7 +43,7 @@ export default function Hero() {
 		<>
 			<section className="w-full bg-muted/20 p-2 md:p-4 lg:p-6">
 				<div className="p-6 mx-auto border rounded bg-card">
-					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start lg:items-center  w-full ">
+					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start lg:items-center w-full ">
 						<div className="flex flex-col space-y-2 md:space-y-6 lg:text-left text-center">
 							<span className="sm:text-lg text-[0.8rem] relative uppercase text-accent-foreground mb-2 ">The AI Strategy & Solutions Lab</span>
 							<div>{title}</div>
@@ -53,9 +53,6 @@ export default function Hero() {
 									{buttonText}
 									<ArrowRight className="size-4" />
 								</Button>
-								{/* <Button variant="secondary" onClick={scrollToContent} className="hidden sm:block uppercase">
-									Mehr Erfahren
-								</Button> */}
 							</div>
 						</div>
 

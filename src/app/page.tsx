@@ -6,7 +6,6 @@ import Team from "@/components/sections/Team";
 import UseCases2 from "@/components/sections/Cases2";
 
 import Contact from "@/components/sections/Contact";
-import { Approach } from "@/components/sections/Approach2";
 import { LanguageProvider } from "@/providers/language";
 import WeBuildCTA from "@/components/sections/WeBuildCTA";
 import Header from "@/components/Header";
