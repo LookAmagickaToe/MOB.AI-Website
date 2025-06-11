@@ -56,10 +56,10 @@ export default function Team() {
 							<div className="p-6 flex flex-col grow">
 								<div className="flex flex-col items-center justify-between mb-1">
 									<h3>{founder.name}</h3>
-									<div className="mx-auto">
+									<div className="mx-auto my-2">
 										<span className="text-center">{founder.role}</span>
 									</div>
-									<div className="flex items-center gap-3 mt-auto pt-2">
+									<div className="flex items-center gap-3 mt-4 mb-2">
 										{founder.logos?.map((logo, index) => (
 											<div key={index} className="h-6 w-auto">
 												<Image
@@ -75,7 +75,7 @@ export default function Team() {
 									</div>
 								</div>
 
-								<p className="my-5 text-xs md:text-base grow text-muted-foreground text-center md:text-left">{language === "en" ? founder.bio : founder.biogerman}</p>
+								<p className="mb-4 text-xs md:text-base grow text-muted-foreground text-center md:text-left">{language === "en" ? founder.bio : founder.biogerman}</p>
 
 								<Button variant="ghost" className="w-full" asChild>
 									<Link href={founder.linkedin} target="_blank" rel="noopener noreferrer" className="w-full">

@@ -44,7 +44,7 @@ export default function Contact() {
 						+49 174 624 78 15
 					</span>
 				</div>
-				<div className="p-8">
+				<div className="p-2">
 					<Cal namespace="isar-ai" calLink="bruno-polster/isar-ai" style={{ width: "100%", height: "100%", overflow: "scroll" }} config={{ layout: "month_view", theme: "dark" }} />
 				</div>
 				<div className="mx-auto text-center border-t p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10 bg-muted/20">
