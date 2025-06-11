@@ -14,7 +14,7 @@ export default function ProblemStatement() {
 		{
 			positive: true,
 			eyecatcher: "40%",
-			valuegerman: "Effizienzsteigerung von Mitarbeitern, die KI richtig einsetzen",
+			valuegerman: "Effizienzsteigerung von Mitarbeitenden, die KI richtig einsetzen",
 			value: "Efficiency Boost for Highly Skilled Workers applying AI",
 			icon: <TrendingUp className="size-12 text-muted" />,
 			source: "Harvard Business School, 2024",

@@ -52,9 +52,13 @@ export default function Team() {
 							<div className="relative h-80 w-auto m-4 rounded overflow-hidden">
 								<Image src={founder.image || "/placeholder.svg"} alt={founder.name} fill className="object-cover object-top" />
 							</div>
-							<div className="p-4 md:p-6 flex flex-col grow">
+
+							<div className="p-6 flex flex-col grow">
 								<div className="flex flex-col items-center justify-between mb-1">
 									<h3>{founder.name}</h3>
+									<div className="mx-auto">
+										<span className="text-center">{founder.role}</span>
+									</div>
 									<div className="flex items-center gap-3 mt-auto pt-2">
 										{founder.logos?.map((logo, index) => (
 											<div key={index} className="h-6 w-auto">
@@ -70,6 +74,7 @@ export default function Team() {
 										))}
 									</div>
 								</div>
+
 								<p className="my-5 text-xs md:text-base grow text-muted-foreground text-center md:text-left">{language === "en" ? founder.bio : founder.biogerman}</p>
 
 								<Button variant="ghost" className="w-full" asChild>

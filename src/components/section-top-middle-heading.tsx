@@ -26,7 +26,7 @@ export default function SectionWithMiddleHeading({
 					{subheading && <h4 className="mt-10 text-center text-muted-foreground">{subheading}</h4>}
 				</div>
 			</div>
-			<div className="p-2 md:p-6 bg-muted/20">{children}</div>
+			<div className="p-2 lg:p-6 bg-muted/20">{children}</div>
 		</section>
 	);
 }

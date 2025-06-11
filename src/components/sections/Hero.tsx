@@ -32,7 +32,7 @@ export default function Hero() {
 		},
 		de: {
 			title: <h1 className="text-4xl sm:text-7xl break-words whitespace-pre-wrap">Machen Sie KI Agenten zu Ihrem Wett&shy;be&shy;werbs&shy;vor&shy;teil</h1>,
-			description: "Wir machen Ihre Mitarbeitenden bis zu 40% effektiver durch die Konzeption und Entwicklung von nativen KI-Lösungen.",
+			description: "Wir machen die Mitarbeitenden von KMUs bis zu 40% effektiver durch Design und Entwicklung von nativen KI-Lösungen.",
 			buttonText: "Unser Angebot",
 			supportedBy: "Unterstützt von",
 		},
@@ -41,15 +41,15 @@ export default function Hero() {
 
 	return (
 		<>
-			<section className="w-full bg-muted/20 p-2 md:p-6">
-				<div className="p-2 sm:p-6 mx-auto border rounded bg-card">
+			<section className="w-full bg-muted/20 p-2 md:p-4 lg:p-6">
+				<div className="p-6 mx-auto border rounded bg-card">
 					<div className="grid grid-cols-1 lg:grid-cols-2 gap-6 md:gap-10 items-start lg:items-center  w-full ">
-						<div className="flex flex-col space-y-2 md:space-y-6 ">
-							<span className="sm:text-lg text-[0.725rem] relative uppercase text-accent-foreground mb-2 text">The AI Strategy & Solutions Lab</span>
+						<div className="flex flex-col space-y-2 md:space-y-6 lg:text-left text-center">
+							<span className="sm:text-lg text-[0.8rem] relative uppercase text-accent-foreground mb-2 ">The AI Strategy & Solutions Lab</span>
 							<div>{title}</div>
-							<p className="text-xs sm:text-xl text-muted-foreground max-w-[600px]">{description}</p>
-							<div className="pt-2 md:pt-4 flex items-center gap-4">
-								<Button onClick={scrollToContact} className="uppercase w-full md:w-auto">
+							<p className="text-xs mx-auto lg:mx-0 sm:text-xl text-muted-foreground max-w-[600px]">{description}</p>
+							<div className="pt-2 md:pt-4 flex items-center">
+								<Button onClick={scrollToContact} className="uppercase w-full lg:w-auto" size={"lg"}>
 									{buttonText}
 									<ArrowRight className="size-4" />
 								</Button>
@@ -71,9 +71,9 @@ export default function Hero() {
 				</div>
 			</section>
 
-			<section className="section-with-lines py-6 flex flex-col items-center">
+			<section className="section-with-lines py-6 flex flex-col items-center px-6">
 				<span className="relative uppercase text-accent-foreground -mb-0">Unterstützt von</span>
-				<div className="relative flex w-full max-w-2xl flex-col items-center justify-center overflow-hidden mt-10">
+				<div className="relative flex w-full max-w-2xl flex-col items-center justify-center overflow-hidden">
 					<Marquee pauseOnHover className="[--duration:20s] [--gap:5rem]">
 						<Image src="/unternehmertum.svg" alt="Unternehmertum" height={0} width={90} className="object-contain" />
 						<Image src="/manage-and-more.svg" alt="Manage and More" height={0} width={240} className="object-contain" />

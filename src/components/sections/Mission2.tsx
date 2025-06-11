@@ -36,7 +36,7 @@ export default function Mission2() {
 		},
 		{
 			Icon: ShieldCheck,
-			name: "DSGVO-konform und sicher",
+			name: "Sicher und DSGVO-konform",
 			description:
 				"Wir legen höchsten Wert auf Datenschutz, sodass Sie die Vorteile künstlicher Intelligenz nutzen können, ohne die Privatsphäre Ihrer Kunden oder die Sicherheit Ihrer Daten zu gefährden.",
 			href: "#",

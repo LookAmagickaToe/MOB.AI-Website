@@ -62,8 +62,8 @@ export default function ProblemStatement() {
 			title: <>Können Sie mithalten?</>,
 			description: [
 				<>
-					Große Konzerne können es sich leisten, ganze Abteilungen von Machine-Learning Ingenieure einzustellen und realisieren erhebliche Effizienzpotentiale. Währenddessen werden
-					kleine und mittelständische Unternehmen durch die rasante Geschwindigkeit der <mark>KI-Fortschritte</mark> abgehängt.
+					Große Konzerne können es sich leisten, ganze Abteilungen von KI-Ingenieure einzustellen und realisieren erhebliche Effizienzpotentiale. Währenddessen werden kleine und
+					mittelständische Unternehmen durch die rasante Geschwindigkeit der <mark>KI-Fortschritte</mark> abgehängt.
 					<br />
 				</>,
 			],
