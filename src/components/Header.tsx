@@ -47,7 +47,7 @@ export default function Header() {
 						<div className="relative h-6 w-auto aspect-2/1 ">
 							<Image src="/isarailogo.png" alt="ISAR AI Logo" fill className="rounded-lg object-contain" priority />
 						</div>
-						<span className="font-heading h-full flex items-center font-semibold text-sky-400 -mb-0.5 -ml-1 text-[20px] leading-none ">AI</span>
+						<span className="font-heading h-full flex items-center font-semibold text-sky-400 -ml-1 text-[21px] leading-none ">AI</span>
 					</div>
 					<div className="items-center hidden sm:flex gap-2 lg:gap-4">
 						<Button variant="link" onClick={scrollToOffer}>

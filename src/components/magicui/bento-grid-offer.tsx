@@ -49,7 +49,7 @@ const BentoCard = ({ name, className, background, Icon, description, footer, ...
 		</div>
 		<div className="flex items-start flex-col border-t bg-sky-500/5 h-48 p-6">
 			<p className="my-0 py-0 text-accent-foreground">OUTCOME</p>
-			<p className="text-muted-foreground">{footer}</p>
+			<p className="text-muted-foreground text-xs md:text-base ">{footer}</p>
 		</div>
 
 		<div className="absolute sm:-right-14 sm:-top-14 -right-7 -top-7">
