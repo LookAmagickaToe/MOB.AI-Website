@@ -15,7 +15,7 @@ export default function Team() {
 			name: "Maxime Christian",
 			role: "AI Engineering",
 			biogerman:
-				"Maxime ist Informatikstudent an der TUM und der Universität Cambridge UK. Er hat als Freelancer an mehreren Projekten für KMU gearbeitet, insbesondere im Bereich der Digitalisierung von Geschäftsprozessen.",
+				"Maxime hat Informatik an der TUM und der Universität Cambridge UK studiert. Als Freelancer hat er außerdem an mehreren Projekten für KMU gearbeitet, insbesondere im Bereich der Digitalisierung von Geschäftsprozessen.",
 			bio: "Maxime is a computer science student at TUM and Cambridge University UK. He has been working as Freelancer on several projects for SME's especially in the field of Business process digitization.",
 			image: "/maxime.png",
 			linkedin: "https://www.linkedin.com/in/maxime-christian-33189116b/",
@@ -25,7 +25,7 @@ export default function Team() {
 			name: "Oliver Sommer",
 			role: "AI Engineering",
 			biogerman:
-				"Oliver studiert Software Systems an der Uni Zürich, ist leidenschaftlicher Entwickler und war zuvor CTO bei peeker.ai. Er hat bereits mehrere Unternehmen als Freelancer bei Software & KI Projekten unterstützt.",
+				"Oliver studierte Software Systems an der Uni Zürich, ist leidenschaftlicher Entwickler und war zuvor CTO bei peeker.ai. Er hat bereits mehrere Unternehmen als Freelancer bei Software & KI Projekten unterstützt.",
 			bio: "Oliver is studying Software Systems at the University of Zurich, is a passionate developer, and previously served as CTO at peeka.ai. He has already supported several companies as a freelancer on software and AI projects.",
 			image: "/oliver2.jpg",
 			linkedin: "https://www.linkedin.com/in/oli-sommer/",

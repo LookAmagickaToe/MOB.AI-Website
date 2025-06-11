@@ -19,7 +19,7 @@ export default function Contact() {
 	useEffect(() => {
 		(async function () {
 			const cal = await getCalApi({ namespace: "isar-ai" });
-			cal("ui", { theme: "dark", cssVarsPerTheme: { light: { "cal-brand": "#000" }, dark: { "cal-brand": "#fff" } }, hideEventTypeDetails: true, layout: "month_view" });
+			cal("ui", { theme: "dark", cssVarsPerTheme: { light: { "cal-brand": "#000" }, dark: { "cal-brand": "#fff" } }, hideEventTypeDetails: false, layout: "month_view" });
 		})();
 	}, []);
 
@@ -33,7 +33,7 @@ export default function Contact() {
 					language === "en" ? "Schedule your free 30-minute intro call – no strings attached." : "Schreiben Sie uns oder buchen Sie ein unverbindliches 30-minütiges Erstgespräch"
 				}
 			>
-				<div className="mx-auto text-center border-y p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10">
+				<div className="mx-auto text-center border-y p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10 bg-muted/20">
 					<span className="text-accent-foreground flex gap-2 items-center">
 						<Mail className="size-4" />
 						info@isarai.de
@@ -47,7 +47,7 @@ export default function Contact() {
 				<div className="p-8">
 					<Cal namespace="isar-ai" calLink="bruno-polster/isar-ai" style={{ width: "100%", height: "100%", overflow: "scroll" }} config={{ layout: "month_view", theme: "dark" }} />
 				</div>
-				<div className="mx-auto text-center border-t p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10">
+				<div className="mx-auto text-center border-t p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10 bg-muted/20">
 					<span className="text-accent-foreground flex gap-2 items-center">
 						<Mail className="size-4" />
 						info@isarai.de
@@ -77,7 +77,7 @@ function Section({ preheading, heading, subheading, children, small = false }: {
 					{subheading && <h4 className="mt-10 text-center text-muted-foreground">{subheading}</h4>}
 				</div>
 			</div>
-			<div className="bg-muted/20">{children}</div>
+			<div className="">{children}</div>
 		</section>
 	);
 }
