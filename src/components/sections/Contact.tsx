@@ -9,6 +9,7 @@ import { useLanguage } from "@/providers/language";
 import SectionWithMiddleHeading from "../section-top-middle-heading";
 import Link from "next/link";
 import Cal, { getCalApi } from "@calcom/embed-react";
+import { cn } from "@/lib/utils";
 
 export default function Contact() {
 	const { language } = useLanguage();
@@ -22,23 +23,9 @@ export default function Contact() {
 		})();
 	}, []);
 
-	// Initialize Calendly widgets once script is loaded
-	useEffect(() => {
-		if (calendlyLoaded) {
-			const interval = setInterval(() => {
-				if ((window as any).Calendly && typeof (window as any).Calendly.initInlineWidgets === "function") {
-					(window as any).Calendly.initInlineWidgets();
-					clearInterval(interval);
-				}
-			}, 100);
-			// Safety timeout
-			setTimeout(() => clearInterval(interval), 3000);
-		}
-	}, [calendlyLoaded]);
-
 	return (
 		<div id="contact">
-			<SectionWithMiddleHeading
+			<Section
 				small
 				preheading={null}
 				heading={language === "en" ? "Get in Touch" : "Kontakt aufnehmen"}
@@ -57,60 +44,8 @@ export default function Contact() {
 						+49 174 624 78 15
 					</span>
 				</div>
-				<div className="grid grid-cols-1 lg:grid-cols-1 gap-12 p-8">
-					{/* <div>
-					<h3 className="mb-9 ">{language === "en" ? "Contact Information" : "Kontaktinformation"}</h3>
-					<div className="space-y-4">
-						<Card className="bg-card border  ">
-							<CardContent className="p-6 flex items-start space-x-4">
-								<Mail className="h-6 w-6  mt-1" />
-								<div>
-									<h4>Email</h4>
-									<p className="overflow-auto whitespace-nowrap">info@isarai.de</p>
-								</div>
-							</CardContent>
-						</Card>
-
-						<Card className="bg-card border ">
-							<CardContent className="p-6 flex items-start space-x-4">
-								<Phone className="h-6 w-6 mt-1" />
-								<div>
-									<h4>{language === "en" ? "Phone" : "Telefon"}</h4>
-									<p className="text-muted-foreground">+49 174 624 78 15</p>
-								</div>
-							</CardContent>
-						</Card>
-
-						<Card
-							onClick={() => window.open("https://www.google.com/maps/search/?api=1&query=Lichtenbergstraße+6,+85748+Garching+bei+München", "_blank")}
-							className="bg-card border "
-						>
-							<CardContent className="p-4 flex items-start space-x-4">
-								<MapPin className="h-6 w-6  mt-1" />
-								<div>
-									<h4>{language === "en" ? "Mail Address" : "Anschrift"}</h4>
-									<p className="text-muted-foreground">Lichtenbergstraße 6, 85748 Garching bei München</p>
-								</div>
-							</CardContent>
-						</Card>
-					</div>
-
-					<div className="mt-16">
-						<Button className="bg-blue-600 hover:bg-blue-700 text-white px-8 py-6 text-lg rounded-md w-full" asChild>
-							<Link href="mailto:info@isarai.de">{language === "en" ? "Send us a Message" : "Sende uns eine Nachricht"}</Link>
-						</Button>
-					</div>
-				</div> */}
-
-					<div className="">
-						{/* <h3 className=" mb-8 ">{language === "en" ? "Schedule a Meeting" : "Buche ein Treffen"}</h3> */}
-						<Cal
-							namespace="isar-ai"
-							calLink="sommertime/isar-ai"
-							style={{ width: "100%", height: "100%", overflow: "scroll" }}
-							config={{ layout: "month_view", theme: "dark" }}
-						/>
-					</div>
+				<div className="p-8">
+					<Cal namespace="isar-ai" calLink="bruno-polster/isar-ai" style={{ width: "100%", height: "100%", overflow: "scroll" }} config={{ layout: "month_view", theme: "dark" }} />
 				</div>
 				<div className="mx-auto text-center border-t p-4 flex flex-col sm:flex-row items-center justify-center gap-2 sm:gap-10">
 					<span className="text-accent-foreground flex gap-2 items-center">
@@ -123,7 +58,26 @@ export default function Contact() {
 						+49 174 624 78 15
 					</span>
 				</div>
-			</SectionWithMiddleHeading>
+			</Section>
 		</div>
+	);
+}
+
+function Section({ preheading, heading, subheading, children, small = false }: { preheading: string | null; heading: string; subheading: string | null; small?: boolean; children: React.ReactNode }) {
+	return (
+		<section className="section-with-lines">
+			<div className={cn("px-4 md:px-6 py-6 sm:py-20 ", { "py-10": small })}>
+				<div className="max-w-3xl mx-auto text-center">
+					{preheading && (
+						<div className="mb-2">
+							<span className="relative uppercase text-accent-foreground sm:text-base text-xs">{preheading}</span>
+						</div>
+					)}
+					<h2 className="text-center">{heading}</h2>
+					{subheading && <h4 className="mt-10 text-center text-muted-foreground">{subheading}</h4>}
+				</div>
+			</div>
+			<div className="bg-muted/20">{children}</div>
+		</section>
 	);
 }

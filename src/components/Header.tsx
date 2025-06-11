@@ -44,12 +44,12 @@ export default function Header() {
 				<div className="flex h-16 items-center justify-between">
 					{/* Group logo and text together */}
 					<div className="flex items-center space-x-2">
-						<div className="relative h-8 w-auto aspect-2/1 ">
+						<div className="relative md:h-6 h-8 w-auto aspect-2/1 ">
 							<Image src="/isarailogo.png" alt="ISAR AI Logo" fill className="rounded-lg object-contain" priority />
 						</div>
-						<span className="h-full flex items-center font-semibold text-sky-400 text-[28px] leading-none ">AI</span>
+						<span className="h-full flex items-center font-semibold text-sky-400 md:text-[22px] text-[28px] leading-none ">AI</span>
 					</div>
-					<div className="items-center hidden sm:flex gap-4">
+					<div className="items-center hidden sm:flex gap-2 lg:gap-4">
 						<Button variant="link" onClick={scrollToOffer}>
 							UNSER ANGEBOT
 						</Button>

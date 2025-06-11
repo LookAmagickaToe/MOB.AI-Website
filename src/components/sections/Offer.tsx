@@ -13,11 +13,11 @@ export default function Offer() {
 			description: (
 				<>
 					<p>
-						<ChevronRight className="size-3 inline-flex items-center" />
+						<ChevronRight className="size-3 inline-flex items-center mr-2" />
 						Ausführliche Analyse Ihres Vorhabens aus technischer & strategischer Sicht
 					</p>
 					<p>
-						<ChevronRight className="size-3 inline-flex items-center" />
+						<ChevronRight className="size-3 inline-flex items-center mr-2" />
 						Fest definierter Zeitraum
 					</p>
 				</>
@@ -33,7 +33,7 @@ export default function Offer() {
 				<>
 					<p>
 						<ChevronRight className="size-3 inline-flex items-center mr-2" />
-						Design, Entwicklung & Implementierung von individuellen KI-Lösungen
+						Design, Entwicklung & Implementierung von individuellen KI-Lösungen oder Individualisierung unserer Plug-and-Play Agenten
 					</p>
 					<p>
 						<ChevronRight className="size-3 inline-flex items-center mr-2" />

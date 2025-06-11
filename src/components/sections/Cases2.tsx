@@ -50,10 +50,6 @@ const agents = [
 	},
 ];
 
-const CENTER_X = 35;
-const CENTER_Y = 35;
-const RADIUS = 22;
-
 const CaseCard = ({ title, description, icon, reverse }: { title: string; description: ReactNode; icon: string; reverse: boolean }) => {
 	return (
 		<Card key={title} className="shrink-0 w-[300px] md:w-[400px] bg-card border p-4 md:p-6 justify-start flex flex-col">
@@ -78,7 +74,7 @@ export default function UseCases() {
 	return (
 		<section className="section-with-lines">
 			<div className="overflow-hidden">
-				<div className="flex flex-row text-center sm:text-left justify-between items-center my-10 px-6">
+				<div className="flex flex-row text-center lg:text-left justify-center lg:justify-between items-center my-10 px-6 gap-6">
 					<h2>Unsere Plug-and-Play Lösungen</h2>
 					<Button size={"lg"} className="sm:flex hidden">
 						KONTAKT AUFNEHMEN <ArrowRight className="size-4 " />
@@ -101,7 +97,7 @@ export default function UseCases() {
 					<div className="pointer-events-none absolute inset-y-0 right-0 w-1/4 bg-linear-to-l from-background"></div>
 				</div>
 			</div>
-			<div className="text-center py-10 border-t px-4">
+			<div className="text-center py-10 border-t px-6">
 				<span>Wir entwickeln laufend neue Tools und Automationen</span>
 				<Button size={"lg"} className="sm:hidden flex w-full mt-6">
 					KONTAKT AUFNEHMEN <ArrowRight className="size-4 " />
