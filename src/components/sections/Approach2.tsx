@@ -11,7 +11,7 @@ export function Approach() {
 
 			content: (
 				<p className="text-muted-foreground ">
-					Wir beginnen mit einem unverbindlichen Gespräch, um Ihre aktuelle Situation zu verstehen und herauszufinden, wo der Einsatz von AI Agents in Ihrem Unternehmen sinnvoll
+					Wir beginnen mit einem unverbindlichen Gespräch, um Ihre aktuelle Situation zu verstehen und herauszufinden, wo der Einsatz von KI Agenten in Ihrem Unternehmen sinnvoll
 					wäre.
 				</p>
 			),

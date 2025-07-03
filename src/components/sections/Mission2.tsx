@@ -28,7 +28,7 @@ export default function Mission2() {
 		{
 			Icon: Sliders,
 			name: "Branchenspezifische Anpassung",
-			description: "Unsere AI Agents können für Ihre spezifischen Branchenanforderungen angepasst werden.",
+			description: "Unsere KI Agenten können für Ihre spezifischen Branchenanforderungen angepasst werden.",
 			href: "#",
 			cta: "Kontakt aufnnehmen",
 			className: "col-span-3 lg:col-span-2",
@@ -53,12 +53,6 @@ export default function Mission2() {
 		// 	background: <img className="absolute -right-20 -top-20 opacity-60" />,
 		// },
 	];
-
-	// subheading={
-	// 				language === "en"
-	// 					? "We focus on AI Agents – intelligent digital assistants that take over repetitive tasks, freeing up your employees to concentrate on value-creating activities."
-	// 					: "Wir konzentrieren uns auf AI Agents – intelligente digitale Assistenten, die wiederkehrende Aufgaben übernehmen und Ihre Mitarbeiter entlasten, damit sie sich auf wertschöpfende Tätigkeiten konzentrieren können."
-	// 			}
 
 	return (
 		<div id="mission">
