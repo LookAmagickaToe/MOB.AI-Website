@@ -47,12 +47,12 @@ export default function Offer() {
 		},
 		{
 			Icon: GraduationCap,
-			name: "GenAI Workshop",
+			name: "KI Schulung",
 			description: (
 				<>
 					<p>
 						<ChevronRight className="size-3 inline-flex items-center mr-2" />
-						Interaktiver Workshop zum richtigen Einsatz von GenAI in der alltäglichen Arbeit
+						Interaktiver Workshop zum richtigen Einsatz von KI in der alltäglichen Arbeit
 					</p>
 					<p>
 						<ChevronRight className="size-3 inline-flex items-center mr-2" />
@@ -60,7 +60,7 @@ export default function Offer() {
 					</p>
 				</>
 			),
-			footer: "Mitarbeitende sind geschult in der praktischen Anwendung von State-of-the-Art GenAI praktiken.",
+			footer: "Mitarbeitende sind geschult in der praktischen Anwendung von State-of-the-Art KI praktiken.",
 			className: "col-span-3 lg:col-span-1",
 			background: <img className="absolute -right-20 -top-20 opacity-60" />,
 		},

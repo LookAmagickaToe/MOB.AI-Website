@@ -98,7 +98,7 @@ export default function UseCases() {
 				</div>
 			</div>
 			<div className="text-center py-10 border-t px-6">
-				<span>Wir entwickeln laufend neue Tools und Automationen</span>
+				{/* <span>Wir entwickeln laufend neue Tools und Automationen</span> */}
 				<Button size={"lg"} className="sm:hidden flex w-full mt-6">
 					KONTAKT AUFNEHMEN <ArrowRight className="size-4 " />
 				</Button>

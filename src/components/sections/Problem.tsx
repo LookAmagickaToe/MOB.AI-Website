@@ -64,7 +64,7 @@ export default function ProblemStatement() {
 				// <>Der Mittelstand steht vor einer entscheidenden Herausforderung:</>,
 				// <>Wie Studien und Umfragen belegen, ist KI nicht mehr optimal, sondern überlebenswichtig.</>,
 				<>
-					<mark>KI</mark> ist nicht mehr optimal, sondern <mark>überlebenswichtig</mark>. <mark>KI-Agenten & -Workflows</mark> revolutionieren schon heute Arbeitsprozesse in
+					<mark>KI</mark> ist nicht mehr optional, sondern <mark>überlebenswichtig</mark>. <mark>KI-Agenten & -Workflows</mark> revolutionieren schon heute Arbeitsprozesse in
 					Unternehmen, indem sie Mitarbeiter nicht ersetzen, <mark>sondern um ein vielfaches produktiver machen</mark>.
 				</>,
 			],
