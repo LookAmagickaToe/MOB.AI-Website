@@ -60,7 +60,7 @@ export default function Hero() {
 							{/* <div className="relative h-[400px] lg:h-[600px] rounded overflow-hidden ">
 								<Image src="/groupimage.png" alt="Founder Team" fill className="object-cover rounded-sm image-render-pixel" priority />
 							</div> */}
-							<div className="relative w-full aspect-video rounded overflow-hidden ">
+							<div className="relative w-full aspect-square rounded overflow-hidden ">
 								<Image src="/groupimage2.jpg" alt="Founder Team" fill className="object-cover rounded-lg" priority />
 							</div>
 						</div>

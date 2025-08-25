@@ -1,11 +1,13 @@
 import type React from "react";
 import type { Metadata, Viewport } from "next";
-import { Inter, Space_Mono } from "next/font/google";
+import { Inter, Space_Mono, Geist_Mono } from "next/font/google";
+import Script from "next/script";
 import "@/app/globals.css";
 import { PostHogProvider } from "@/providers/posthog";
 
 // const font = Cutive_Mono({ subsets: ["latin"], weight: "400", variable: "--font-body" });
-const body = Space_Mono({ subsets: ["latin"], weight: ["400"], variable: "--font-body" });
+// const body = Space_Mono({ subsets: ["latin"], weight: ["200"], variable: "--font-body" });
+const body = Geist_Mono({ subsets: ["latin"], weight: ["200"], variable: "--font-body" });
 const heading = Inter({ subsets: ["latin"], weight: ["400"], variable: "--font-heading" });
 
 export const viewport: Viewport = {
@@ -42,6 +44,9 @@ export default function RootLayout({ children }: Readonly<{ children: React.Reac
 		<html lang="de" className="dark">
 			<body className={`${body.className} ${heading.variable} text-foreground min-h-screen flex flex-col overflow-y-scroll overflow-x-hidden`}>
 				<PostHogProvider>{children}</PostHogProvider>
+
+				<Script id="cookie-banner" type="text/javascript" src="//embeds.iubenda.com/widgets/8851f719-c33b-4713-ab0f-db6cebd3f2e9.js" strategy="afterInteractive"></Script>
+
 			</body>
 		</html>
 	);

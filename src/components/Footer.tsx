@@ -8,7 +8,7 @@ export default function Footer() {
 					<p className="text-xs ">{new Date().getFullYear()} ISAR AI. All rights reserved.</p>
 					<div className="flex space-x-4 mt-4 md:mt-0">
 						<Link href="/impressum#datenschutz" className="text-xs transition-colors">
-							Privacy Policy
+							Datenschutzerklärung
 						</Link>
 						<Link href="/imprint" className="text-xs transition-colors">
 							Impressum

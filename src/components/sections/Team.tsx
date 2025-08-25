@@ -11,16 +11,16 @@ import Link from "next/link";
 export default function Team() {
 	const { language } = useLanguage();
 	const founders = [
-		{
-			name: "Maxime Christian",
-			role: "AI Engineering",
-			biogerman:
-				"Maxime hat Informatik an der TUM und der Universität Cambridge UK studiert. Als Freelancer hat er außerdem an mehreren Projekten für KMU gearbeitet, insbesondere im Bereich der Digitalisierung von Geschäftsprozessen.",
-			bio: "Maxime is a computer science student at TUM and Cambridge University UK. He has been working as Freelancer on several projects for SME's especially in the field of Business process digitization.",
-			image: "/maxime.png",
-			linkedin: "https://www.linkedin.com/in/maxime-christian-33189116b/",
-			logos: ["/tum.png", "/cambridge.png"],
-		},
+		// {
+		// 	name: "Maxime Christian",
+		// 	role: "AI Engineering",
+		// 	biogerman:
+		// 		"Maxime hat Informatik an der TUM und der Universität Cambridge UK studiert. Als Freelancer hat er außerdem an mehreren Projekten für KMU gearbeitet, insbesondere im Bereich der Digitalisierung von Geschäftsprozessen.",
+		// 	bio: "Maxime is a computer science student at TUM and Cambridge University UK. He has been working as Freelancer on several projects for SME's especially in the field of Business process digitization.",
+		// 	image: "/maxime.png",
+		// 	linkedin: "https://www.linkedin.com/in/maxime-christian-33189116b/",
+		// 	logos: ["/tum.png", "/cambridge.png"],
+		// },
 		{
 			name: "Oliver Sommer",
 			role: "AI Engineering",
@@ -46,11 +46,13 @@ export default function Team() {
 	return (
 		<div id="team">
 			<SectionWithMiddleHeading small preheading={null} heading={language === "en" ? "Meet the Team" : "Das Team"} subheading={null}>
-				<div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-2 md:gap-6 ">
+				<div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-6 ">
 					{founders.map((founder, index) => (
 						<div key={index} className="flex flex-col bg-card overflow-hidden border rounded-lg mx-auto w-full ">
-							<div className="relative h-80 w-auto m-4 rounded overflow-hidden">
-								<Image src={founder.image || "/placeholder.svg"} alt={founder.name} fill className="object-cover object-top" />
+							<div>
+								<div className="relative aspect-[2/3] max-w-xs mx-6 my-6 mx-auto rounded overflow-hidden">
+									<Image src={founder.image || "/placeholder.svg"} alt={founder.name} fill className="object-cover object-top " />
+								</div>
 							</div>
 
 							<div className="p-6 flex flex-col grow">

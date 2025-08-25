@@ -5,7 +5,7 @@ import Image from "next/image";
 import { Button } from "@/components/ui/button";
 import { useMobile } from "@/hooks/use-mobile";
 import { useLanguage } from "@/providers/language";
-import { ArrowRight, ChevronDown, ChevronUp, Menu, X } from "lucide-react";
+import { ArrowRight, ArrowUpRight, ChevronDown, ChevronUp, Menu, X } from "lucide-react";
 import Link from "next/link";
 
 export default function Header() {
@@ -48,7 +48,7 @@ export default function Header() {
 							<Image src="/isarai.svg" alt="ISAR AI Logo" fill className="rounded-lg object-contain" priority />
 						</div>
 					</div>
-					<div className="items-center hidden sm:flex gap-2 lg:gap-4">
+					<div className="items-center hidden md:flex gap-2 lg:gap-4">
 						<Button variant="link" onClick={scrollToOffer}>
 							UNSER ANGEBOT
 						</Button>
@@ -66,6 +66,10 @@ export default function Header() {
 							{"Kontakt aufnehmen"}
 						</button> */}
 
+						<Button variant="outline" size={"sm"} asChild>
+							<Link href={"http://eepurl.com/jhJtGg"}>AI FOMO Report <ArrowUpRight className="size-4" /></Link>
+						</Button>
+
 						<Button variant="default" onClick={scrollToContact} size={"sm"}>
 							KONTAKT
 							<ArrowRight className="size-4" />
@@ -75,7 +79,12 @@ export default function Header() {
 							{language === "en" ? "DE" : "EN"}
 						</Button> */}
 					</div>
-					<div className="items-center flex sm:hidden gap-2 ">
+					<div className="items-center flex md:hidden gap-2 ">
+
+						<Button variant="outline" size="sm" asChild>
+							<Link href={"http://eepurl.com/jhJtGg"}>AI FOMO Report <ArrowUpRight className="size-4" /></Link>
+						</Button>
+
 						<Button variant="default" onClick={scrollToContact} size={"sm"}>
 							KONTAKT
 							<ArrowRight className="size-4" />

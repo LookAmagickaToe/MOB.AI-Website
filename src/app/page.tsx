@@ -12,6 +12,7 @@ import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 import Mission2 from "@/components/sections/Mission2";
 import Offer from "@/components/sections/Offer";
+import Newsletter from "@/components/sections/Newsletter";
 
 export default function Home() {
 	return (
@@ -23,6 +24,7 @@ export default function Home() {
 				<div className="">
 					<Hero />
 					<WeBuildCTA />
+					{/* <Newsletter /> */}
 
 					<Problem />
 					<Problem2 />
